@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 // جرب تخلي اللاعب يخار في الأول هل يلاعب حد معاه ولا الكومبيوتر 
 // الكومبيوتر بيختار عشوائي من 1:9 والمستوى التاني عشوائي بررده بس من طرق الفوز ينقي ما بينهم
+// ممكن أضيف هيستوري للجيم 
+// ممكن كمان أحط حفظ لثيم محدد يمكن استعماله بعدين او اختياره من الثميات
 
 namespace _3.Tic_Tac_Toe_Game
 {
@@ -68,8 +70,7 @@ namespace _3.Tic_Tac_Toe_Game
             if (CheckValues(btn1, btn5, btn9)) return;
             if (CheckValues(btn3, btn5, btn7)) return;
 
-
-
+            
             if (stGameStatus.PlayCount == 9)
             {
                 GameStatus.GameOver = true;
@@ -80,8 +81,6 @@ namespace _3.Tic_Tac_Toe_Game
 
    
         }
-
-
 
         public void ChangeXorO(Button btn)
         {
@@ -203,7 +202,7 @@ namespace _3.Tic_Tac_Toe_Game
             lblTurnPlayer.ForeColor = currentPlayer;
             lblWinner.ForeColor = currentPlayer;
 
-            lblTitle.ForeColor = Color.FromArgb(255 - g, 255 - r, 255 - b); ;
+    //        lblTitle.ForeColor = Color.FromArgb(255 - g, 255 - r, 255 - b); ;
         }
 
         private void btnBackToDefault_Click(object sender, EventArgs e)
@@ -216,10 +215,13 @@ namespace _3.Tic_Tac_Toe_Game
             label2.ForeColor = label1.ForeColor;
             lblTurnPlayer.ForeColor = Color.FromArgb(46, 202, 228);
             lblWinner.ForeColor = lblTurnPlayer.ForeColor;
-            lblTitle.ForeColor = Color.FromArgb(255, 250, 250);
+       //     lblTitle.ForeColor = Color.FromArgb(255, 250, 250);
 
             this.BackColor = Color.FromArgb(53, 27, 209);
+        }
 
+        private void frmTicTacToeGame_Load(object sender, EventArgs e)
+        {
 
         }
     }

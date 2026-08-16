@@ -55,7 +55,8 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(228)))), ((int)(((byte)(46)))));
-            this.label1.Location = new System.Drawing.Point(82, 82);
+            this.label1.Location = new System.Drawing.Point(184, 100);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(109, 42);
             this.label1.TabIndex = 0;
@@ -67,10 +68,12 @@
             this.lblTurnPlayer.BackColor = System.Drawing.Color.Transparent;
             this.lblTurnPlayer.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTurnPlayer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(202)))), ((int)(((byte)(228)))));
-            this.lblTurnPlayer.Location = new System.Drawing.Point(62, 152);
+            this.lblTurnPlayer.Location = new System.Drawing.Point(157, 188);
+            this.lblTurnPlayer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTurnPlayer.Name = "lblTurnPlayer";
             this.lblTurnPlayer.Size = new System.Drawing.Size(163, 42);
             this.lblTurnPlayer.TabIndex = 1;
+            this.lblTurnPlayer.Tag = "Player1";
             this.lblTurnPlayer.Text = "Player1";
             // 
             // label2
@@ -79,7 +82,8 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(228)))), ((int)(((byte)(46)))));
-            this.label2.Location = new System.Drawing.Point(59, 222);
+            this.label2.Location = new System.Drawing.Point(161, 276);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(155, 42);
             this.label2.TabIndex = 2;
@@ -91,18 +95,21 @@
             this.lblWinner.BackColor = System.Drawing.Color.Transparent;
             this.lblWinner.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWinner.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(202)))), ((int)(((byte)(228)))));
-            this.lblWinner.Location = new System.Drawing.Point(19, 292);
+            this.lblWinner.Location = new System.Drawing.Point(121, 363);
+            this.lblWinner.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWinner.Name = "lblWinner";
             this.lblWinner.Size = new System.Drawing.Size(235, 42);
             this.lblWinner.TabIndex = 3;
+            this.lblWinner.Tag = "In Progress";
             this.lblWinner.Text = "In Progress";
             // 
             // btnRestartGame
             // 
             this.btnRestartGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnRestartGame.Location = new System.Drawing.Point(38, 362);
+            this.btnRestartGame.Location = new System.Drawing.Point(115, 450);
+            this.btnRestartGame.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRestartGame.Name = "btnRestartGame";
-            this.btnRestartGame.Size = new System.Drawing.Size(197, 63);
+            this.btnRestartGame.Size = new System.Drawing.Size(246, 79);
             this.btnRestartGame.TabIndex = 4;
             this.btnRestartGame.Text = "Restart Game";
             this.btnRestartGame.UseVisualStyleBackColor = true;
@@ -114,9 +121,10 @@
             this.btn3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn3.Font = new System.Drawing.Font("Ravie", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn3.ForeColor = System.Drawing.Color.Red;
-            this.btn3.Location = new System.Drawing.Point(660, 82);
+            this.btn3.Location = new System.Drawing.Point(825, 102);
+            this.btn3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn3.Name = "btn3";
-            this.btn3.Size = new System.Drawing.Size(75, 75);
+            this.btn3.Size = new System.Drawing.Size(94, 94);
             this.btn3.TabIndex = 5;
             this.btn3.Tag = "?";
             this.btn3.Text = "?";
@@ -129,9 +137,10 @@
             this.btn2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn2.Font = new System.Drawing.Font("Ravie", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn2.ForeColor = System.Drawing.Color.Red;
-            this.btn2.Location = new System.Drawing.Point(556, 82);
+            this.btn2.Location = new System.Drawing.Point(695, 102);
+            this.btn2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn2.Name = "btn2";
-            this.btn2.Size = new System.Drawing.Size(75, 75);
+            this.btn2.Size = new System.Drawing.Size(94, 94);
             this.btn2.TabIndex = 6;
             this.btn2.Tag = "?";
             this.btn2.Text = "?";
@@ -144,9 +153,10 @@
             this.btn1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn1.Font = new System.Drawing.Font("Ravie", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn1.ForeColor = System.Drawing.Color.Red;
-            this.btn1.Location = new System.Drawing.Point(452, 82);
+            this.btn1.Location = new System.Drawing.Point(565, 102);
+            this.btn1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn1.Name = "btn1";
-            this.btn1.Size = new System.Drawing.Size(75, 75);
+            this.btn1.Size = new System.Drawing.Size(94, 94);
             this.btn1.TabIndex = 7;
             this.btn1.Tag = "?";
             this.btn1.Text = "?";
@@ -159,9 +169,10 @@
             this.btn4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn4.Font = new System.Drawing.Font("Ravie", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn4.ForeColor = System.Drawing.Color.Red;
-            this.btn4.Location = new System.Drawing.Point(452, 189);
+            this.btn4.Location = new System.Drawing.Point(565, 236);
+            this.btn4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn4.Name = "btn4";
-            this.btn4.Size = new System.Drawing.Size(75, 75);
+            this.btn4.Size = new System.Drawing.Size(94, 94);
             this.btn4.TabIndex = 10;
             this.btn4.Tag = "?";
             this.btn4.Text = "?";
@@ -174,9 +185,10 @@
             this.btn5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn5.Font = new System.Drawing.Font("Ravie", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn5.ForeColor = System.Drawing.Color.Red;
-            this.btn5.Location = new System.Drawing.Point(556, 189);
+            this.btn5.Location = new System.Drawing.Point(695, 236);
+            this.btn5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn5.Name = "btn5";
-            this.btn5.Size = new System.Drawing.Size(75, 75);
+            this.btn5.Size = new System.Drawing.Size(94, 94);
             this.btn5.TabIndex = 9;
             this.btn5.Tag = "?";
             this.btn5.Text = "?";
@@ -189,9 +201,10 @@
             this.btn6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn6.Font = new System.Drawing.Font("Ravie", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn6.ForeColor = System.Drawing.Color.Red;
-            this.btn6.Location = new System.Drawing.Point(660, 189);
+            this.btn6.Location = new System.Drawing.Point(825, 236);
+            this.btn6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn6.Name = "btn6";
-            this.btn6.Size = new System.Drawing.Size(75, 75);
+            this.btn6.Size = new System.Drawing.Size(94, 94);
             this.btn6.TabIndex = 8;
             this.btn6.Tag = "?";
             this.btn6.Text = "?";
@@ -204,9 +217,10 @@
             this.btn7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn7.Font = new System.Drawing.Font("Ravie", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn7.ForeColor = System.Drawing.Color.Red;
-            this.btn7.Location = new System.Drawing.Point(452, 292);
+            this.btn7.Location = new System.Drawing.Point(565, 365);
+            this.btn7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn7.Name = "btn7";
-            this.btn7.Size = new System.Drawing.Size(75, 75);
+            this.btn7.Size = new System.Drawing.Size(94, 94);
             this.btn7.TabIndex = 13;
             this.btn7.Tag = "?";
             this.btn7.Text = "?";
@@ -219,9 +233,10 @@
             this.btn8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn8.Font = new System.Drawing.Font("Ravie", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn8.ForeColor = System.Drawing.Color.Red;
-            this.btn8.Location = new System.Drawing.Point(556, 292);
+            this.btn8.Location = new System.Drawing.Point(695, 365);
+            this.btn8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn8.Name = "btn8";
-            this.btn8.Size = new System.Drawing.Size(75, 75);
+            this.btn8.Size = new System.Drawing.Size(94, 94);
             this.btn8.TabIndex = 12;
             this.btn8.Tag = "?";
             this.btn8.Text = "?";
@@ -234,9 +249,10 @@
             this.btn9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn9.Font = new System.Drawing.Font("Ravie", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn9.ForeColor = System.Drawing.Color.Red;
-            this.btn9.Location = new System.Drawing.Point(660, 292);
+            this.btn9.Location = new System.Drawing.Point(825, 365);
+            this.btn9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn9.Name = "btn9";
-            this.btn9.Size = new System.Drawing.Size(75, 75);
+            this.btn9.Size = new System.Drawing.Size(94, 94);
             this.btn9.TabIndex = 11;
             this.btn9.Tag = "?";
             this.btn9.Text = "?";
@@ -249,7 +265,8 @@
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.Snow;
-            this.lblTitle.Location = new System.Drawing.Point(240, 19);
+            this.lblTitle.Location = new System.Drawing.Point(300, 24);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(332, 42);
             this.lblTitle.TabIndex = 14;
@@ -257,9 +274,10 @@
             // 
             // btnBackToDefault
             // 
-            this.btnBackToDefault.Location = new System.Drawing.Point(138, 441);
+            this.btnBackToDefault.Location = new System.Drawing.Point(239, 549);
+            this.btnBackToDefault.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBackToDefault.Name = "btnBackToDefault";
-            this.btnBackToDefault.Size = new System.Drawing.Size(120, 42);
+            this.btnBackToDefault.Size = new System.Drawing.Size(150, 52);
             this.btnBackToDefault.TabIndex = 27;
             this.btnBackToDefault.Text = "Defult Color Mode";
             this.btnBackToDefault.UseVisualStyleBackColor = true;
@@ -267,9 +285,10 @@
             // 
             // btnChangeColorMode
             // 
-            this.btnChangeColorMode.Location = new System.Drawing.Point(12, 441);
+            this.btnChangeColorMode.Location = new System.Drawing.Point(82, 549);
+            this.btnChangeColorMode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnChangeColorMode.Name = "btnChangeColorMode";
-            this.btnChangeColorMode.Size = new System.Drawing.Size(120, 42);
+            this.btnChangeColorMode.Size = new System.Drawing.Size(150, 52);
             this.btnChangeColorMode.TabIndex = 26;
             this.btnChangeColorMode.Text = "Change Color Mode";
             this.btnChangeColorMode.UseVisualStyleBackColor = true;
@@ -277,10 +296,10 @@
             // 
             // frmTicTacToeGame
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(27)))), ((int)(((byte)(209)))));
-            this.ClientSize = new System.Drawing.Size(800, 495);
+            this.ClientSize = new System.Drawing.Size(1000, 619);
             this.Controls.Add(this.btnBackToDefault);
             this.Controls.Add(this.btnChangeColorMode);
             this.Controls.Add(this.lblTitle);
@@ -298,9 +317,12 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblTurnPlayer);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmTicTacToeGame";
             this.Text = "Tic-Tac-Toe Game";
+            this.Load += new System.EventHandler(this.frmTicTacToeGame_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
