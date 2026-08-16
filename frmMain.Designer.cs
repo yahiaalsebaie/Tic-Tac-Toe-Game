@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.btnRestartGame = new System.Windows.Forms.Button();
             this.lblPlayer2Title = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -37,11 +36,11 @@
             this.txtPlayer1Name = new System.Windows.Forms.TextBox();
             this.rbComputer = new System.Windows.Forms.RadioButton();
             this.txtPlayer2Name = new System.Windows.Forms.TextBox();
-            this.lblTitle = new System.Windows.Forms.Label();
             this.rbFriend = new System.Windows.Forms.RadioButton();
             this.gbDetails = new System.Windows.Forms.GroupBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.gbDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
@@ -49,7 +48,7 @@
             // btnRestartGame
             // 
             this.btnRestartGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnRestartGame.Location = new System.Drawing.Point(340, 515);
+            this.btnRestartGame.Location = new System.Drawing.Point(301, 449);
             this.btnRestartGame.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRestartGame.Name = "btnRestartGame";
             this.btnRestartGame.Size = new System.Drawing.Size(222, 79);
@@ -116,6 +115,7 @@
             this.txtPlayer1Name.Size = new System.Drawing.Size(157, 31);
             this.txtPlayer1Name.TabIndex = 3;
             this.txtPlayer1Name.Text = "Player 1 Name";
+            this.txtPlayer1Name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtPlayer1Name.WordWrap = false;
             // 
             // rbComputer
@@ -143,19 +143,8 @@
             this.txtPlayer2Name.Size = new System.Drawing.Size(157, 31);
             this.txtPlayer2Name.TabIndex = 4;
             this.txtPlayer2Name.Text = "Player 2 Name";
+            this.txtPlayer2Name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtPlayer2Name.WordWrap = false;
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitle.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.Snow;
-            this.lblTitle.Location = new System.Drawing.Point(263, 60);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(332, 42);
-            this.lblTitle.TabIndex = 51;
-            this.lblTitle.Text = "Tic-Tac-Toe Game";
             // 
             // rbFriend
             // 
@@ -218,14 +207,26 @@
             0,
             0});
             // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitle.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.Snow;
+            this.lblTitle.Location = new System.Drawing.Point(247, 65);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(332, 42);
+            this.lblTitle.TabIndex = 54;
+            this.lblTitle.Text = "Tic-Tac-Toe Game";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(20)))), ((int)(((byte)(200)))));
-            this.ClientSize = new System.Drawing.Size(900, 632);
-            this.Controls.Add(this.gbDetails);
+            this.ClientSize = new System.Drawing.Size(829, 580);
             this.Controls.Add(this.lblTitle);
+            this.Controls.Add(this.gbDetails);
             this.Controls.Add(this.rbComputer);
             this.Controls.Add(this.rbFriend);
             this.Controls.Add(this.btnRestartGame);
@@ -244,8 +245,6 @@
         }
 
         #endregion
-
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button btnRestartGame;
         private System.Windows.Forms.Label lblPlayer2Title;
         private System.Windows.Forms.Label label2;
@@ -254,10 +253,10 @@
         private System.Windows.Forms.TextBox txtPlayer1Name;
         private System.Windows.Forms.RadioButton rbComputer;
         private System.Windows.Forms.TextBox txtPlayer2Name;
-        private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.RadioButton rbFriend;
         private System.Windows.Forms.GroupBox gbDetails;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label lblTitle;
     }
 }

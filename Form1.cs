@@ -11,6 +11,7 @@ using System.Windows.Forms;
 // الكومبيوتر بيختار عشوائي من 1:9 والمستوى التاني عشوائي بررده بس من طرق الفوز ينقي ما بينهم
 // ممكن أضيف هيستوري للجيم 
 // ممكن كمان أحط حفظ لثيم محدد يمكن استعماله بعدين او اختياره من الثميات
+// إعدادات اللعب باللوحة فقط (الأرقام) والحروف زي R --> Restart رسالة طبعاً قبلها عشان ميعدش الجيم فجأة
 
 namespace _3.Tic_Tac_Toe_Game
 {
@@ -221,6 +222,11 @@ namespace _3.Tic_Tac_Toe_Game
         }
 
         private void frmTicTacToeGame_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }
