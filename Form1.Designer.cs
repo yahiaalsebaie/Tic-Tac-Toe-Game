@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTicTacToeGame));
             this.label1 = new System.Windows.Forms.Label();
             this.lblTurnPlayer = new System.Windows.Forms.Label();
-            this.lable = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.lblWinner = new System.Windows.Forms.Label();
             this.btnRestartGame = new System.Windows.Forms.Button();
             this.btn3 = new System.Windows.Forms.Button();
@@ -43,15 +43,18 @@
             this.btn7 = new System.Windows.Forms.Button();
             this.btn8 = new System.Windows.Forms.Button();
             this.btn9 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.btnBackToDefault = new System.Windows.Forms.Button();
+            this.btnChangeColorMode = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Brown;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(228)))), ((int)(((byte)(46)))));
             this.label1.Location = new System.Drawing.Point(82, 82);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(109, 42);
@@ -61,30 +64,33 @@
             // lblTurnPlayer
             // 
             this.lblTurnPlayer.AutoSize = true;
+            this.lblTurnPlayer.BackColor = System.Drawing.Color.Transparent;
             this.lblTurnPlayer.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTurnPlayer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblTurnPlayer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(202)))), ((int)(((byte)(228)))));
             this.lblTurnPlayer.Location = new System.Drawing.Point(62, 152);
             this.lblTurnPlayer.Name = "lblTurnPlayer";
             this.lblTurnPlayer.Size = new System.Drawing.Size(163, 42);
             this.lblTurnPlayer.TabIndex = 1;
             this.lblTurnPlayer.Text = "Player1";
             // 
-            // lable
+            // label2
             // 
-            this.lable.AutoSize = true;
-            this.lable.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lable.ForeColor = System.Drawing.Color.Brown;
-            this.lable.Location = new System.Drawing.Point(59, 222);
-            this.lable.Name = "lable";
-            this.lable.Size = new System.Drawing.Size(155, 42);
-            this.lable.TabIndex = 2;
-            this.lable.Text = "Winner";
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(228)))), ((int)(((byte)(46)))));
+            this.label2.Location = new System.Drawing.Point(59, 222);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(155, 42);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Winner";
             // 
             // lblWinner
             // 
             this.lblWinner.AutoSize = true;
+            this.lblWinner.BackColor = System.Drawing.Color.Transparent;
             this.lblWinner.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWinner.ForeColor = System.Drawing.Color.FloralWhite;
+            this.lblWinner.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(202)))), ((int)(((byte)(228)))));
             this.lblWinner.Location = new System.Drawing.Point(19, 292);
             this.lblWinner.Name = "lblWinner";
             this.lblWinner.Size = new System.Drawing.Size(235, 42);
@@ -93,7 +99,7 @@
             // 
             // btnRestartGame
             // 
-            this.btnRestartGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRestartGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnRestartGame.Location = new System.Drawing.Point(38, 362);
             this.btnRestartGame.Name = "btnRestartGame";
             this.btnRestartGame.Size = new System.Drawing.Size(197, 63);
@@ -237,24 +243,47 @@
             this.btn9.UseVisualStyleBackColor = false;
             this.btn9.Click += new System.EventHandler(this.btn_Click);
             // 
-            // label5
+            // lblTitle
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Snow;
-            this.label5.Location = new System.Drawing.Point(240, 19);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(332, 42);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Tic-Tac-Toe Game";
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitle.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.Snow;
+            this.lblTitle.Location = new System.Drawing.Point(240, 19);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(332, 42);
+            this.lblTitle.TabIndex = 14;
+            this.lblTitle.Text = "Tic-Tac-Toe Game";
+            // 
+            // btnBackToDefault
+            // 
+            this.btnBackToDefault.Location = new System.Drawing.Point(138, 441);
+            this.btnBackToDefault.Name = "btnBackToDefault";
+            this.btnBackToDefault.Size = new System.Drawing.Size(120, 42);
+            this.btnBackToDefault.TabIndex = 27;
+            this.btnBackToDefault.Text = "Defult Color Mode";
+            this.btnBackToDefault.UseVisualStyleBackColor = true;
+            this.btnBackToDefault.Click += new System.EventHandler(this.btnBackToDefault_Click);
+            // 
+            // btnChangeColorMode
+            // 
+            this.btnChangeColorMode.Location = new System.Drawing.Point(12, 441);
+            this.btnChangeColorMode.Name = "btnChangeColorMode";
+            this.btnChangeColorMode.Size = new System.Drawing.Size(120, 42);
+            this.btnChangeColorMode.TabIndex = 26;
+            this.btnChangeColorMode.Text = "Change Color Mode";
+            this.btnChangeColorMode.UseVisualStyleBackColor = true;
+            this.btnChangeColorMode.Click += new System.EventHandler(this.btnChangeColorMode_Click);
             // 
             // frmTicTacToeGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(27)))), ((int)(((byte)(209)))));
             this.ClientSize = new System.Drawing.Size(800, 495);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.btnBackToDefault);
+            this.Controls.Add(this.btnChangeColorMode);
+            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.btn7);
             this.Controls.Add(this.btn8);
             this.Controls.Add(this.btn9);
@@ -266,7 +295,7 @@
             this.Controls.Add(this.btn3);
             this.Controls.Add(this.btnRestartGame);
             this.Controls.Add(this.lblWinner);
-            this.Controls.Add(this.lable);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.lblTurnPlayer);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -281,7 +310,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblTurnPlayer;
-        private System.Windows.Forms.Label lable;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblWinner;
         private System.Windows.Forms.Button btnRestartGame;
         private System.Windows.Forms.Button btn3;
@@ -293,8 +322,10 @@
         private System.Windows.Forms.Button btn7;
         private System.Windows.Forms.Button btn8;
         private System.Windows.Forms.Button btn9;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblTitle;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Button btnBackToDefault;
+        private System.Windows.Forms.Button btnChangeColorMode;
     }
 }
 

@@ -35,10 +35,11 @@ namespace _3.Tic_Tac_Toe_Game
             static public sbyte PlayCount;
         }
         public stGameStatus GameStatus;
-
         public bool CheckValues(Button btn1, Button btn2, Button btn3)
         {
-            if ((btn1.Tag.ToString() != "?") && (btn1.Tag.ToString() == btn2.Tag.ToString()) && (btn2.Tag.ToString() == btn3.Tag.ToString()))
+            if ((btn1.Tag.ToString() != "?")
+                && (btn1.Tag.ToString() == btn2.Tag.ToString())
+                && (btn2.Tag.ToString() == btn3.Tag.ToString()))
             {
                 btn1.ForeColor = Color.Orchid;
                 btn2.ForeColor = Color.Orchid;
@@ -185,6 +186,41 @@ namespace _3.Tic_Tac_Toe_Game
 
         }
 
+        private void btnChangeColorMode_Click(object sender, EventArgs e)
+        {
+            Random random = new Random();
+            int r = random.Next(0, 255);
+            int g = random.Next(0, 255);
+            int b = random.Next(0, 255);
 
+            this.BackColor = Color.FromArgb(r, g, b);
+
+            Color titleLabels = Color.FromArgb(255 - r, 255 - g, 255 - b);
+            label1.ForeColor = titleLabels;
+            label2.ForeColor = label1.ForeColor;
+
+             Color currentPlayer = Color.FromArgb(255 - b, 255 - r, 255 - g);
+            lblTurnPlayer.ForeColor = currentPlayer;
+            lblWinner.ForeColor = currentPlayer;
+
+            lblTitle.ForeColor = Color.FromArgb(255 - g, 255 - r, 255 - b); ;
+        }
+
+        private void btnBackToDefault_Click(object sender, EventArgs e)
+        {
+            this.BackColor = default;
+            /*label1.BackColor = default;
+            label1.ForeColor = default;*/
+
+            label1.ForeColor = Color.FromArgb(202, 228, 46);
+            label2.ForeColor = label1.ForeColor;
+            lblTurnPlayer.ForeColor = Color.FromArgb(46, 202, 228);
+            lblWinner.ForeColor = lblTurnPlayer.ForeColor;
+            lblTitle.ForeColor = Color.FromArgb(255, 250, 250);
+
+            this.BackColor = Color.FromArgb(53, 27, 209);
+
+
+        }
     }
 }
