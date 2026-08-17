@@ -13,12 +13,13 @@ namespace _3.Tic_Tac_Toe_Game
 {
     public partial class frmTicTacToeGame : Form
     {
+        private frmMain _frmMain;
+
         private string _player1Name;
         private string _player2Name;
         private sbyte _howManyRounds;
 
         private byte _roundNumber = 1;
-
         private byte _player1WinTimes = 0;
         private byte _player2WinTimes = 0;
         private byte _drawTimes = 0;
@@ -28,30 +29,25 @@ namespace _3.Tic_Tac_Toe_Game
             InitializeComponent();
         }
 
-        public frmTicTacToeGame(
-            string player1 = "Player1",
-            string player2 = "Player2",
-            sbyte howManyRounds = -1)
+        public frmTicTacToeGame(string player1 = "Player1",
+            string player2 = "Player2", sbyte howManyRounds = -1, frmMain frmMain = null)
         {
             _player1Name = player1;
             _player2Name = player2;
             _howManyRounds = howManyRounds;
+            _frmMain = frmMain;
 
             InitializeComponent();
         }
 
         public enum enPlayer
         {
-            Player1,
-            Player2
+            Player1, Player2
         }
 
         public enum enWinner
         {
-            Player1,
-            Player2,
-            Draw,
-            GameInProgress
+            Player1, Player2, Draw, GameInProgress
         }
 
         public struct stGameStatus
@@ -79,20 +75,11 @@ namespace _3.Tic_Tac_Toe_Game
 
                 GameStatus.GameOver = true;
 
-                GameStatus.Winner =
-                btn1.Tag.ToString() == "X"
-                ? enWinner.Player1
-                : enWinner.Player2;
+                GameStatus.Winner = btn1.Tag.ToString() == "X" ? enWinner.Player1 : enWinner.Player2;
 
-                lblWinner.Text = GameStatus.Winner
-                .ToString()
-                .ToUpper();
+                lblWinner.Text = GameStatus.Winner.ToString().ToUpper();
 
-                MessageBox.Show(
-                lblWinner.Text + " Wins",
-                "Game Over",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Asterisk);
+                MessageBox.Show(lblWinner.Text + " Wins", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
                 UpdateWinnerScore();
 
@@ -194,6 +181,7 @@ namespace _3.Tic_Tac_Toe_Game
                     break;
 
                 case enWinner.Draw:
+                    _drawTimes++;
                     lblDrawTimes.Text = _drawTimes.ToString();
                     break;
             }
@@ -203,6 +191,8 @@ namespace _3.Tic_Tac_Toe_Game
         private void EndRound()
         {
             _roundNumber++;
+            if (chkAutoRestart.Checked) { RestartRound(); }
+
             if (_roundNumber == _howManyRounds)
             {
                 lblFinalRound.Visible = true;
@@ -210,7 +200,9 @@ namespace _3.Tic_Tac_Toe_Game
             }
             if (_roundNumber > _howManyRounds)
             {
-                
+                frmGameResults frmGameResults = new frmGameResults(_player1Name, _player1WinTimes, _player2Name, _player2WinTimes, _drawTimes, _howManyRounds, this, _frmMain);
+                _roundNumber--;
+                frmGameResults.ShowDialog();
             }
             UpdateRoundNumber();
         }
@@ -230,7 +222,20 @@ namespace _3.Tic_Tac_Toe_Game
                 lblFinalRound.Visible = true;
         }
 
-        public void RestartGame()
+        public void DefaultValues()
+        {
+            RestartRound();
+            _roundNumber = 1;
+            UpdateRoundNumber();
+            _player1WinTimes = 0;
+            _player2WinTimes = 0;
+            _drawTimes = 0;
+            lblDrawTimes.Text = "0";
+            lblP1Wins.Text = "0";
+            lblP2Wins.Text = "0";
+            //frmTicTacToeGame_Load(null, null);
+        }
+        private void RestartRound()
         {
             if (lblWinner.Text == "IN PROGRESS")
             {
@@ -248,7 +253,7 @@ namespace _3.Tic_Tac_Toe_Game
 
             CurrentPlayer = enPlayer.Player1;
 
-            lblTurnPlayer.Text = _player1Name;
+            lblTurnPlayer.Text = _player1Name.Trim();
             lblWinner.Text = "IN PROGRESS";
 
             foreach (Button btn in gbCards.Controls.OfType<Button>().Where(B => B.Tag != null))
@@ -257,10 +262,12 @@ namespace _3.Tic_Tac_Toe_Game
                 btn.Tag = "?";
                 btn.ForeColor = Color.Red;
             }
+
+
         }
-        private void btnRestartGame_Click(object sender, EventArgs e)
+        private void btnRestartRound_Click(object sender, EventArgs e)
         {
-            RestartGame();
+            RestartRound();
         }
 
 
@@ -311,6 +318,42 @@ namespace _3.Tic_Tac_Toe_Game
             UpdateRoundNumber();
 
             lblTurnPlayer.Text = _player1Name.Trim();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            _frmMain.Show();
+            this.Close();
+        }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnBackToMain_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want back to main screen?\nYou will lose your progress!", "Back to main screen", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) != DialogResult.Yes)
+                return;
+            else
+            {
+                _frmMain.Show();
+                this.Close();
+            }
+        }
+
+        private void lblTurnPlayer_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkAutoRestart_CheckedChanged(object sender, EventArgs e)
+        {
         }
     }
 }

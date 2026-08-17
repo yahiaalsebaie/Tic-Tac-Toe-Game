@@ -33,10 +33,7 @@
             this.lblTurnPlayer = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblWinner = new System.Windows.Forms.Label();
-            this.btnRestartGame = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.btnBackToDefault = new System.Windows.Forms.Button();
-            this.btnChangeColorMode = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.lblP1Wins = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -58,6 +55,13 @@
             this.lblFinalRound = new System.Windows.Forms.Label();
             this.lblDrawTimes = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnBackToMain = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnBackToDefault = new System.Windows.Forms.Button();
+            this.btnChangeColorMode = new System.Windows.Forms.Button();
+            this.btnRestartGame = new System.Windows.Forms.Button();
+            this.chkAutoRestart = new System.Windows.Forms.CheckBox();
             this.groupBox2.SuspendLayout();
             this.gbCards.SuspendLayout();
             this.SuspendLayout();
@@ -81,13 +85,14 @@
             this.lblTurnPlayer.BackColor = System.Drawing.Color.Transparent;
             this.lblTurnPlayer.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTurnPlayer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(202)))), ((int)(((byte)(228)))));
-            this.lblTurnPlayer.Location = new System.Drawing.Point(144, 247);
+            this.lblTurnPlayer.Location = new System.Drawing.Point(144, 230);
             this.lblTurnPlayer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTurnPlayer.Name = "lblTurnPlayer";
             this.lblTurnPlayer.Size = new System.Drawing.Size(163, 42);
             this.lblTurnPlayer.TabIndex = 1;
             this.lblTurnPlayer.Tag = "Player1";
             this.lblTurnPlayer.Text = "Player1";
+            this.lblTurnPlayer.Click += new System.EventHandler(this.lblTurnPlayer_Click);
             // 
             // label2
             // 
@@ -95,7 +100,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(228)))), ((int)(((byte)(46)))));
-            this.label2.Location = new System.Drawing.Point(148, 311);
+            this.label2.Location = new System.Drawing.Point(148, 293);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(155, 42);
@@ -108,25 +113,13 @@
             this.lblWinner.BackColor = System.Drawing.Color.Transparent;
             this.lblWinner.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWinner.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(202)))), ((int)(((byte)(228)))));
-            this.lblWinner.Location = new System.Drawing.Point(108, 375);
+            this.lblWinner.Location = new System.Drawing.Point(108, 355);
             this.lblWinner.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWinner.Name = "lblWinner";
             this.lblWinner.Size = new System.Drawing.Size(235, 42);
             this.lblWinner.TabIndex = 3;
             this.lblWinner.Tag = "IN PROGRESS";
             this.lblWinner.Text = "IN PROGRESS";
-            // 
-            // btnRestartGame
-            // 
-            this.btnRestartGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnRestartGame.Location = new System.Drawing.Point(102, 450);
-            this.btnRestartGame.Margin = new System.Windows.Forms.Padding(4);
-            this.btnRestartGame.Name = "btnRestartGame";
-            this.btnRestartGame.Size = new System.Drawing.Size(246, 79);
-            this.btnRestartGame.TabIndex = 4;
-            this.btnRestartGame.Text = "Restart Round";
-            this.btnRestartGame.UseVisualStyleBackColor = true;
-            this.btnRestartGame.Click += new System.EventHandler(this.btnRestartGame_Click);
             // 
             // lblTitle
             // 
@@ -140,28 +133,6 @@
             this.lblTitle.Size = new System.Drawing.Size(332, 42);
             this.lblTitle.TabIndex = 14;
             this.lblTitle.Text = "Tic-Tac-Toe Game";
-            // 
-            // btnBackToDefault
-            // 
-            this.btnBackToDefault.Location = new System.Drawing.Point(226, 549);
-            this.btnBackToDefault.Margin = new System.Windows.Forms.Padding(4);
-            this.btnBackToDefault.Name = "btnBackToDefault";
-            this.btnBackToDefault.Size = new System.Drawing.Size(150, 52);
-            this.btnBackToDefault.TabIndex = 27;
-            this.btnBackToDefault.Text = "Defult Color Mode";
-            this.btnBackToDefault.UseVisualStyleBackColor = true;
-            this.btnBackToDefault.Click += new System.EventHandler(this.btnBackToDefault_Click);
-            // 
-            // btnChangeColorMode
-            // 
-            this.btnChangeColorMode.Location = new System.Drawing.Point(69, 549);
-            this.btnChangeColorMode.Margin = new System.Windows.Forms.Padding(4);
-            this.btnChangeColorMode.Name = "btnChangeColorMode";
-            this.btnChangeColorMode.Size = new System.Drawing.Size(150, 52);
-            this.btnChangeColorMode.TabIndex = 26;
-            this.btnChangeColorMode.Text = "Change Color Mode";
-            this.btnChangeColorMode.UseVisualStyleBackColor = true;
-            this.btnChangeColorMode.Click += new System.EventHandler(this.btnChangeColorMode_Click);
             // 
             // label4
             // 
@@ -253,7 +224,7 @@
             this.lblRoundNumber.BackColor = System.Drawing.Color.Transparent;
             this.lblRoundNumber.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRoundNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(228)))), ((int)(((byte)(46)))));
-            this.lblRoundNumber.Location = new System.Drawing.Point(189, 148);
+            this.lblRoundNumber.Location = new System.Drawing.Point(189, 168);
             this.lblRoundNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRoundNumber.Name = "lblRoundNumber";
             this.lblRoundNumber.Size = new System.Drawing.Size(73, 42);
@@ -427,7 +398,7 @@
             this.lblFinalRound.BackColor = System.Drawing.Color.Transparent;
             this.lblFinalRound.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFinalRound.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(228)))), ((int)(((byte)(46)))));
-            this.lblFinalRound.Location = new System.Drawing.Point(106, 189);
+            this.lblFinalRound.Location = new System.Drawing.Point(108, 106);
             this.lblFinalRound.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFinalRound.Name = "lblFinalRound";
             this.lblFinalRound.Size = new System.Drawing.Size(239, 42);
@@ -463,12 +434,115 @@
             this.label3.Text = "Draw:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnBackToMain
+            // 
+            this.btnBackToMain.BackgroundImage = global::_3.Tic_Tac_Toe_Game.Properties.Resources.Settings;
+            this.btnBackToMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnBackToMain.FlatAppearance.BorderSize = 0;
+            this.btnBackToMain.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(129)))), ((int)(((byte)(175)))));
+            this.btnBackToMain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBackToMain.Location = new System.Drawing.Point(2, 3);
+            this.btnBackToMain.Name = "btnBackToMain";
+            this.btnBackToMain.Size = new System.Drawing.Size(42, 48);
+            this.btnBackToMain.TabIndex = 52;
+            this.btnBackToMain.UseVisualStyleBackColor = true;
+            this.btnBackToMain.Click += new System.EventHandler(this.btnBackToMain_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::_3.Tic_Tac_Toe_Game.Properties.Resources.Minimize_Window;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumAquamarine;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(913, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(37, 48);
+            this.button1.TabIndex = 51;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Image = global::_3.Tic_Tac_Toe_Game.Properties.Resources.Close_Window4;
+            this.btnClose.Location = new System.Drawing.Point(950, 3);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(51, 48);
+            this.btnClose.TabIndex = 50;
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnBackToDefault
+            // 
+            this.btnBackToDefault.Image = global::_3.Tic_Tac_Toe_Game.Properties.Resources.Scroll;
+            this.btnBackToDefault.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnBackToDefault.Location = new System.Drawing.Point(229, 548);
+            this.btnBackToDefault.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBackToDefault.Name = "btnBackToDefault";
+            this.btnBackToDefault.Size = new System.Drawing.Size(119, 72);
+            this.btnBackToDefault.TabIndex = 27;
+            this.btnBackToDefault.Text = "Defult Color Mode";
+            this.btnBackToDefault.UseVisualStyleBackColor = true;
+            this.btnBackToDefault.Click += new System.EventHandler(this.btnBackToDefault_Click);
+            // 
+            // btnChangeColorMode
+            // 
+            this.btnChangeColorMode.Image = global::_3.Tic_Tac_Toe_Game.Properties.Resources.Briefcase;
+            this.btnChangeColorMode.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnChangeColorMode.Location = new System.Drawing.Point(102, 548);
+            this.btnChangeColorMode.Margin = new System.Windows.Forms.Padding(4);
+            this.btnChangeColorMode.Name = "btnChangeColorMode";
+            this.btnChangeColorMode.Size = new System.Drawing.Size(119, 72);
+            this.btnChangeColorMode.TabIndex = 26;
+            this.btnChangeColorMode.Text = "Change Color Mode";
+            this.btnChangeColorMode.UseVisualStyleBackColor = true;
+            this.btnChangeColorMode.Click += new System.EventHandler(this.btnChangeColorMode_Click);
+            // 
+            // btnRestartGame
+            // 
+            this.btnRestartGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnRestartGame.Image = global::_3.Tic_Tac_Toe_Game.Properties.Resources.Restart;
+            this.btnRestartGame.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRestartGame.Location = new System.Drawing.Point(102, 429);
+            this.btnRestartGame.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRestartGame.Name = "btnRestartGame";
+            this.btnRestartGame.Size = new System.Drawing.Size(246, 79);
+            this.btnRestartGame.TabIndex = 4;
+            this.btnRestartGame.Text = "Restart Round";
+            this.btnRestartGame.UseVisualStyleBackColor = true;
+            this.btnRestartGame.Click += new System.EventHandler(this.btnRestartRound_Click);
+            // 
+            // chkAutoRestart
+            // 
+            this.chkAutoRestart.AutoSize = true;
+            this.chkAutoRestart.FlatAppearance.BorderSize = 2;
+            this.chkAutoRestart.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.chkAutoRestart.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.chkAutoRestart.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.chkAutoRestart.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.chkAutoRestart.Location = new System.Drawing.Point(163, 515);
+            this.chkAutoRestart.Name = "chkAutoRestart";
+            this.chkAutoRestart.Size = new System.Drawing.Size(125, 24);
+            this.chkAutoRestart.TabIndex = 53;
+            this.chkAutoRestart.Text = "Auto Restart";
+            this.chkAutoRestart.UseVisualStyleBackColor = true;
+            this.chkAutoRestart.CheckedChanged += new System.EventHandler(this.chkAutoRestart_CheckedChanged);
+            // 
             // frmTicTacToeGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(27)))), ((int)(((byte)(209)))));
             this.ClientSize = new System.Drawing.Size(1000, 637);
+            this.Controls.Add(this.chkAutoRestart);
+            this.Controls.Add(this.btnBackToMain);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.gbCards);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label6);
@@ -485,6 +559,7 @@
             this.Controls.Add(this.lblRoundNumber);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmTicTacToeGame";
@@ -530,6 +605,10 @@
         private System.Windows.Forms.Label lblFinalRound;
         private System.Windows.Forms.Label lblDrawTimes;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBackToMain;
+        private System.Windows.Forms.CheckBox chkAutoRestart;
     }
 }
 

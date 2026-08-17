@@ -27,9 +27,9 @@ namespace _3.Tic_Tac_Toe_Game
 
         private void btnStartGame_Click(object sender, EventArgs e)
         {
-            frmTicTacToeGame frmTicTacToeGame = new frmTicTacToeGame(txtPlayer1Name.Text.Trim(), txtPlayer2Name.Text.Trim(), (sbyte)numericUpDown1.Value);
-            frmTicTacToeGame.ShowDialog();
+            frmTicTacToeGame frmTicTacToeGame = new frmTicTacToeGame(txtPlayer1Name.Text.Trim(), txtPlayer2Name.Text.Trim(), (sbyte)numericUpDown1.Value,this);
             this.Hide();
+            frmTicTacToeGame.ShowDialog();
         }
 
         private void rbComputer_CheckedChanged(object sender, EventArgs e)
@@ -45,7 +45,16 @@ namespace _3.Tic_Tac_Toe_Game
                 lblPlayer2Title.Visible = true;
                 txtPlayer2Name.Visible = true;
             }
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
