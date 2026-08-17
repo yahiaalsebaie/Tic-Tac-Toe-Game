@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace _3.Tic_Tac_Toe_Game
@@ -36,6 +29,7 @@ namespace _3.Tic_Tac_Toe_Game
         {
             frmTicTacToeGame frmTicTacToeGame = new frmTicTacToeGame(txtPlayer1Name.Text.Trim(), txtPlayer2Name.Text.Trim(), (sbyte)numericUpDown1.Value);
             frmTicTacToeGame.ShowDialog();
+            this.Hide();
         }
 
         private void rbComputer_CheckedChanged(object sender, EventArgs e)

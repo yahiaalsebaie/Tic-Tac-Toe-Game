@@ -59,6 +59,7 @@ namespace _3.Tic_Tac_Toe_Game
             public enWinner Winner;
             public bool GameOver;
             public byte PlayCount;
+
         }
 
         public stGameStatus GameStatus;
@@ -207,6 +208,10 @@ namespace _3.Tic_Tac_Toe_Game
                 lblFinalRound.Visible = true;
                 return;
             }
+            if (_roundNumber > _howManyRounds)
+            {
+                
+            }
             UpdateRoundNumber();
         }
 
@@ -225,8 +230,7 @@ namespace _3.Tic_Tac_Toe_Game
                 lblFinalRound.Visible = true;
         }
 
-
-        private void btnRestartGame_Click_1(object sender, EventArgs e)
+        public void RestartGame()
         {
             if (lblWinner.Text == "IN PROGRESS")
             {
@@ -253,6 +257,10 @@ namespace _3.Tic_Tac_Toe_Game
                 btn.Tag = "?";
                 btn.ForeColor = Color.Red;
             }
+        }
+        private void btnRestartGame_Click(object sender, EventArgs e)
+        {
+            RestartGame();
         }
 
 

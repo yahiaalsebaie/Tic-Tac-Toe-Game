@@ -124,9 +124,9 @@
             this.btnRestartGame.Name = "btnRestartGame";
             this.btnRestartGame.Size = new System.Drawing.Size(246, 79);
             this.btnRestartGame.TabIndex = 4;
-            this.btnRestartGame.Text = "Restart Game";
+            this.btnRestartGame.Text = "Restart Round";
             this.btnRestartGame.UseVisualStyleBackColor = true;
-            this.btnRestartGame.Click += new System.EventHandler(this.btnRestartGame_Click_1);
+            this.btnRestartGame.Click += new System.EventHandler(this.btnRestartGame_Click);
             // 
             // lblTitle
             // 
@@ -454,7 +454,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(228)))), ((int)(((byte)(46)))));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(202)))), ((int)(((byte)(228)))));
             this.label3.Location = new System.Drawing.Point(384, 559);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
@@ -468,7 +468,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(27)))), ((int)(((byte)(209)))));
-            this.ClientSize = new System.Drawing.Size(1000, 682);
+            this.ClientSize = new System.Drawing.Size(1000, 637);
             this.Controls.Add(this.gbCards);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label6);
