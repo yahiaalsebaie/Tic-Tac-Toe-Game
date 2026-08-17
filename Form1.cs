@@ -171,13 +171,17 @@ namespace _3.Tic_Tac_Toe_Game
 
         private void btnRestartGame_Click_1(object sender, EventArgs e)
         {
+            if (lblWinner.Text == "IN PROGRESS")
+            {
+                if (MessageBox.Show("Are You Sure You Want To Restart The Round?", "Restart", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) != DialogResult.Yes) return;
+            }
             GameStatus = new stGameStatus();
             stGameStatus.PlayCount = 0;
             CurrentPlayer = enPlayer.Player1;
             lblTurnPlayer.Text = "Player1";
             lblWinner.Text = "IN PROGRESS";
 
-            foreach (Button btn in Controls.OfType<Button>().Where(B => B.Tag != null )  )
+            foreach (Button btn in gbCards.Controls.OfType<Button>().Where(B => B.Tag != null))
             {
                 btn.Text = "?";
                 btn.Tag = "?";
