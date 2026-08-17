@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnRestartGame = new System.Windows.Forms.Button();
+            this.btnStartGame = new System.Windows.Forms.Button();
             this.lblPlayer2Title = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblTurnPlayer = new System.Windows.Forms.Label();
@@ -45,17 +45,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnRestartGame
+            // btnStartGame
             // 
-            this.btnRestartGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnRestartGame.Location = new System.Drawing.Point(301, 449);
-            this.btnRestartGame.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnRestartGame.Name = "btnRestartGame";
-            this.btnRestartGame.Size = new System.Drawing.Size(222, 79);
-            this.btnRestartGame.TabIndex = 7;
-            this.btnRestartGame.Text = "Start Game";
-            this.btnRestartGame.UseVisualStyleBackColor = true;
-            this.btnRestartGame.Click += new System.EventHandler(this.btnRestartGame_Click);
+            this.btnStartGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.btnStartGame.Location = new System.Drawing.Point(301, 449);
+            this.btnStartGame.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnStartGame.Name = "btnStartGame";
+            this.btnStartGame.Size = new System.Drawing.Size(222, 79);
+            this.btnStartGame.TabIndex = 7;
+            this.btnStartGame.Text = "Start Game";
+            this.btnStartGame.UseVisualStyleBackColor = true;
+            this.btnStartGame.Click += new System.EventHandler(this.btnStartGame_Click);
             // 
             // lblPlayer2Title
             // 
@@ -110,11 +110,12 @@
             this.txtPlayer1Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
             this.txtPlayer1Name.Location = new System.Drawing.Point(14, 86);
             this.txtPlayer1Name.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPlayer1Name.MaxLength = 25;
             this.txtPlayer1Name.Multiline = true;
             this.txtPlayer1Name.Name = "txtPlayer1Name";
             this.txtPlayer1Name.Size = new System.Drawing.Size(157, 31);
             this.txtPlayer1Name.TabIndex = 3;
-            this.txtPlayer1Name.Text = "Player 1 Name";
+            this.txtPlayer1Name.Text = "Player1";
             this.txtPlayer1Name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtPlayer1Name.WordWrap = false;
             // 
@@ -138,11 +139,12 @@
             this.txtPlayer2Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
             this.txtPlayer2Name.Location = new System.Drawing.Point(244, 86);
             this.txtPlayer2Name.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPlayer2Name.MaxLength = 25;
             this.txtPlayer2Name.Multiline = true;
             this.txtPlayer2Name.Name = "txtPlayer2Name";
             this.txtPlayer2Name.Size = new System.Drawing.Size(157, 31);
             this.txtPlayer2Name.TabIndex = 4;
-            this.txtPlayer2Name.Text = "Player 2 Name";
+            this.txtPlayer2Name.Text = "Player2";
             this.txtPlayer2Name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtPlayer2Name.WordWrap = false;
             // 
@@ -229,11 +231,12 @@
             this.Controls.Add(this.gbDetails);
             this.Controls.Add(this.rbComputer);
             this.Controls.Add(this.rbFriend);
-            this.Controls.Add(this.btnRestartGame);
+            this.Controls.Add(this.btnStartGame);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.8F);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMain";
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.gbDetails.ResumeLayout(false);
@@ -245,7 +248,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnRestartGame;
+        private System.Windows.Forms.Button btnStartGame;
         private System.Windows.Forms.Label lblPlayer2Title;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblTurnPlayer;

@@ -38,12 +38,12 @@
             this.btnBackToDefault = new System.Windows.Forms.Button();
             this.btnChangeColorMode = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblP1Wins = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblP2Wins = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblRoundNumber = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.btn9 = new System.Windows.Forms.Button();
             this.btn8 = new System.Windows.Forms.Button();
@@ -55,6 +55,9 @@
             this.btn3 = new System.Windows.Forms.Button();
             this.btn5 = new System.Windows.Forms.Button();
             this.gbCards = new System.Windows.Forms.GroupBox();
+            this.lblFinalRound = new System.Windows.Forms.Label();
+            this.lblDrawTimes = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.gbCards.SuspendLayout();
             this.SuspendLayout();
@@ -78,7 +81,7 @@
             this.lblTurnPlayer.BackColor = System.Drawing.Color.Transparent;
             this.lblTurnPlayer.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTurnPlayer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(202)))), ((int)(((byte)(228)))));
-            this.lblTurnPlayer.Location = new System.Drawing.Point(148, 214);
+            this.lblTurnPlayer.Location = new System.Drawing.Point(144, 247);
             this.lblTurnPlayer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTurnPlayer.Name = "lblTurnPlayer";
             this.lblTurnPlayer.Size = new System.Drawing.Size(163, 42);
@@ -92,7 +95,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(228)))), ((int)(((byte)(46)))));
-            this.label2.Location = new System.Drawing.Point(148, 286);
+            this.label2.Location = new System.Drawing.Point(148, 311);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(155, 42);
@@ -105,7 +108,7 @@
             this.lblWinner.BackColor = System.Drawing.Color.Transparent;
             this.lblWinner.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWinner.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(202)))), ((int)(((byte)(228)))));
-            this.lblWinner.Location = new System.Drawing.Point(108, 358);
+            this.lblWinner.Location = new System.Drawing.Point(108, 375);
             this.lblWinner.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWinner.Name = "lblWinner";
             this.lblWinner.Size = new System.Drawing.Size(235, 42);
@@ -174,19 +177,19 @@
             this.label4.Tag = "Player1";
             this.label4.Text = "Player1";
             // 
-            // label5
+            // lblP1Wins
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(228)))), ((int)(((byte)(46)))));
-            this.label5.Location = new System.Drawing.Point(15, 66);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 42);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "0";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblP1Wins.AutoSize = true;
+            this.lblP1Wins.BackColor = System.Drawing.Color.Transparent;
+            this.lblP1Wins.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblP1Wins.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(228)))), ((int)(((byte)(46)))));
+            this.lblP1Wins.Location = new System.Drawing.Point(15, 66);
+            this.lblP1Wins.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblP1Wins.Name = "lblP1Wins";
+            this.lblP1Wins.Size = new System.Drawing.Size(38, 42);
+            this.lblP1Wins.TabIndex = 2;
+            this.lblP1Wins.Text = "0";
+            this.lblP1Wins.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
             // 
@@ -216,47 +219,46 @@
             this.label7.Tag = "Player2";
             this.label7.Text = "Player2";
             // 
-            // label8
+            // lblP2Wins
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(228)))), ((int)(((byte)(46)))));
-            this.label8.Location = new System.Drawing.Point(213, 66);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(38, 42);
-            this.label8.TabIndex = 31;
-            this.label8.Text = "0";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblP2Wins.AutoSize = true;
+            this.lblP2Wins.BackColor = System.Drawing.Color.Transparent;
+            this.lblP2Wins.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblP2Wins.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(228)))), ((int)(((byte)(46)))));
+            this.lblP2Wins.Location = new System.Drawing.Point(213, 66);
+            this.lblP2Wins.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblP2Wins.Name = "lblP2Wins";
+            this.lblP2Wins.Size = new System.Drawing.Size(38, 42);
+            this.lblP2Wins.TabIndex = 31;
+            this.lblP2Wins.Text = "0";
+            this.lblP2Wins.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.lblP1Wins);
+            this.groupBox2.Controls.Add(this.lblP2Wins);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBox2.Location = new System.Drawing.Point(574, 512);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(376, 113);
+            this.groupBox2.Size = new System.Drawing.Size(376, 109);
             this.groupBox2.TabIndex = 33;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Game Details";
             // 
-            // label3
+            // lblRoundNumber
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(228)))), ((int)(((byte)(46)))));
-            this.label3.Location = new System.Drawing.Point(188, 142);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 42);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "0/0";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.lblRoundNumber.AutoSize = true;
+            this.lblRoundNumber.BackColor = System.Drawing.Color.Transparent;
+            this.lblRoundNumber.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRoundNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(228)))), ((int)(((byte)(46)))));
+            this.lblRoundNumber.Location = new System.Drawing.Point(189, 148);
+            this.lblRoundNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblRoundNumber.Name = "lblRoundNumber";
+            this.lblRoundNumber.Size = new System.Drawing.Size(73, 42);
+            this.lblRoundNumber.TabIndex = 0;
+            this.lblRoundNumber.Text = "0/0";
             // 
             // btn9
             // 
@@ -419,15 +421,59 @@
             this.gbCards.TabIndex = 28;
             this.gbCards.TabStop = false;
             // 
+            // lblFinalRound
+            // 
+            this.lblFinalRound.AutoSize = true;
+            this.lblFinalRound.BackColor = System.Drawing.Color.Transparent;
+            this.lblFinalRound.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFinalRound.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(228)))), ((int)(((byte)(46)))));
+            this.lblFinalRound.Location = new System.Drawing.Point(106, 189);
+            this.lblFinalRound.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFinalRound.Name = "lblFinalRound";
+            this.lblFinalRound.Size = new System.Drawing.Size(239, 42);
+            this.lblFinalRound.TabIndex = 0;
+            this.lblFinalRound.Text = "Final round";
+            this.lblFinalRound.Visible = false;
+            // 
+            // lblDrawTimes
+            // 
+            this.lblDrawTimes.AutoSize = true;
+            this.lblDrawTimes.BackColor = System.Drawing.Color.Transparent;
+            this.lblDrawTimes.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDrawTimes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(228)))), ((int)(((byte)(46)))));
+            this.lblDrawTimes.Location = new System.Drawing.Point(520, 559);
+            this.lblDrawTimes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDrawTimes.Name = "lblDrawTimes";
+            this.lblDrawTimes.Size = new System.Drawing.Size(38, 42);
+            this.lblDrawTimes.TabIndex = 31;
+            this.lblDrawTimes.Text = "0";
+            this.lblDrawTimes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(228)))), ((int)(((byte)(46)))));
+            this.label3.Location = new System.Drawing.Point(384, 559);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(136, 42);
+            this.label3.TabIndex = 31;
+            this.label3.Text = "Draw:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frmTicTacToeGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(27)))), ((int)(((byte)(209)))));
-            this.ClientSize = new System.Drawing.Size(1000, 637);
+            this.ClientSize = new System.Drawing.Size(1000, 682);
             this.Controls.Add(this.gbCards);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label6);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblDrawTimes);
             this.Controls.Add(this.btnBackToDefault);
             this.Controls.Add(this.btnChangeColorMode);
             this.Controls.Add(this.lblTitle);
@@ -435,12 +481,14 @@
             this.Controls.Add(this.lblWinner);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblTurnPlayer);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblFinalRound);
+            this.Controls.Add(this.lblRoundNumber);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmTicTacToeGame";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tic-Tac-Toe Game";
             this.Load += new System.EventHandler(this.frmTicTacToeGame_Load);
             this.groupBox2.ResumeLayout(false);
@@ -462,12 +510,12 @@
         private System.Windows.Forms.Button btnBackToDefault;
         private System.Windows.Forms.Button btnChangeColorMode;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblP1Wins;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblP2Wins;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblRoundNumber;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button btn9;
         private System.Windows.Forms.Button btn8;
@@ -479,6 +527,9 @@
         private System.Windows.Forms.Button btn3;
         private System.Windows.Forms.Button btn5;
         private System.Windows.Forms.GroupBox gbCards;
+        private System.Windows.Forms.Label lblFinalRound;
+        private System.Windows.Forms.Label lblDrawTimes;
+        private System.Windows.Forms.Label label3;
     }
 }
 

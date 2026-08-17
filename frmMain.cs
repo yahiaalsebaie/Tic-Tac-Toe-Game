@@ -24,13 +24,17 @@ namespace _3.Tic_Tac_Toe_Game
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox1.Checked) numericUpDown1.Enabled = false;
+            if (checkBox1.Checked)
+            {
+                numericUpDown1.Enabled = false;
+                numericUpDown1.Value = -1;
+            }
             else numericUpDown1.Enabled = true;
         }
 
-        private void btnRestartGame_Click(object sender, EventArgs e)
+        private void btnStartGame_Click(object sender, EventArgs e)
         {
-            frmTicTacToeGame frmTicTacToeGame = new frmTicTacToeGame();
+            frmTicTacToeGame frmTicTacToeGame = new frmTicTacToeGame(txtPlayer1Name.Text.Trim(), txtPlayer2Name.Text.Trim(), (sbyte)numericUpDown1.Value);
             frmTicTacToeGame.ShowDialog();
         }
 
@@ -40,6 +44,7 @@ namespace _3.Tic_Tac_Toe_Game
             {
                 lblPlayer2Title.Visible = false;
                 txtPlayer2Name.Visible = false;
+                txtPlayer2Name.Text = "Computer";
             }
             else
             {
