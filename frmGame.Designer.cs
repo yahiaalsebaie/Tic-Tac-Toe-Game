@@ -51,6 +51,7 @@
             this.btn3 = new System.Windows.Forms.Button();
             this.btn5 = new System.Windows.Forms.Button();
             this.gbCards = new System.Windows.Forms.GroupBox();
+            this.lblShadow = new System.Windows.Forms.Label();
             this.lblFinalRound = new System.Windows.Forms.Label();
             this.lblDrawTimes = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -74,7 +75,7 @@
             this.label1.Location = new System.Drawing.Point(171, 100);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 42);
+            this.label1.Size = new System.Drawing.Size(90, 33);
             this.label1.TabIndex = 0;
             this.label1.Text = "Turn";
             // 
@@ -87,7 +88,7 @@
             this.lblTurnPlayer.Location = new System.Drawing.Point(144, 230);
             this.lblTurnPlayer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTurnPlayer.Name = "lblTurnPlayer";
-            this.lblTurnPlayer.Size = new System.Drawing.Size(163, 42);
+            this.lblTurnPlayer.Size = new System.Drawing.Size(134, 33);
             this.lblTurnPlayer.TabIndex = 1;
             this.lblTurnPlayer.Tag = "Player1";
             this.lblTurnPlayer.Text = "Player1";
@@ -103,7 +104,7 @@
             this.label2.Location = new System.Drawing.Point(148, 293);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(155, 42);
+            this.label2.Size = new System.Drawing.Size(129, 33);
             this.label2.TabIndex = 2;
             this.label2.Text = "Winner";
             // 
@@ -116,7 +117,7 @@
             this.lblWinner.Location = new System.Drawing.Point(108, 355);
             this.lblWinner.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWinner.Name = "lblWinner";
-            this.lblWinner.Size = new System.Drawing.Size(235, 42);
+            this.lblWinner.Size = new System.Drawing.Size(194, 33);
             this.lblWinner.TabIndex = 3;
             this.lblWinner.Tag = "IN PROGRESS";
             this.lblWinner.Text = "IN PROGRESS";
@@ -131,7 +132,7 @@
             this.lblTitle.Location = new System.Drawing.Point(307, 24);
             this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(345, 43);
+            this.lblTitle.Size = new System.Drawing.Size(273, 33);
             this.lblTitle.TabIndex = 14;
             this.lblTitle.Text = "Tic-Tac-Toe Game";
             // 
@@ -144,7 +145,7 @@
             this.lblGDplayer1.Location = new System.Drawing.Point(14, 23);
             this.lblGDplayer1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGDplayer1.Name = "lblGDplayer1";
-            this.lblGDplayer1.Size = new System.Drawing.Size(163, 42);
+            this.lblGDplayer1.Size = new System.Drawing.Size(134, 33);
             this.lblGDplayer1.TabIndex = 30;
             this.lblGDplayer1.Tag = "Player1";
             this.lblGDplayer1.Text = "Player1";
@@ -158,7 +159,7 @@
             this.lblP1Wins.Location = new System.Drawing.Point(15, 66);
             this.lblP1Wins.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblP1Wins.Name = "lblP1Wins";
-            this.lblP1Wins.Size = new System.Drawing.Size(38, 42);
+            this.lblP1Wins.Size = new System.Drawing.Size(32, 33);
             this.lblP1Wins.TabIndex = 2;
             this.lblP1Wins.Text = "0";
             this.lblP1Wins.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -172,7 +173,7 @@
             this.label6.Location = new System.Drawing.Point(1001, 817);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(163, 42);
+            this.label6.Size = new System.Drawing.Size(134, 33);
             this.label6.TabIndex = 30;
             this.label6.Tag = "Player1";
             this.label6.Text = "Player1";
@@ -186,7 +187,7 @@
             this.lblGDplayer2.Location = new System.Drawing.Point(212, 23);
             this.lblGDplayer2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGDplayer2.Name = "lblGDplayer2";
-            this.lblGDplayer2.Size = new System.Drawing.Size(164, 42);
+            this.lblGDplayer2.Size = new System.Drawing.Size(135, 33);
             this.lblGDplayer2.TabIndex = 32;
             this.lblGDplayer2.Tag = "Player2";
             this.lblGDplayer2.Text = "Player2";
@@ -200,7 +201,7 @@
             this.lblP2Wins.Location = new System.Drawing.Point(213, 66);
             this.lblP2Wins.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblP2Wins.Name = "lblP2Wins";
-            this.lblP2Wins.Size = new System.Drawing.Size(38, 42);
+            this.lblP2Wins.Size = new System.Drawing.Size(32, 33);
             this.lblP2Wins.TabIndex = 31;
             this.lblP2Wins.Text = "0";
             this.lblP2Wins.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -228,7 +229,7 @@
             this.lblRoundNumber.Location = new System.Drawing.Point(189, 168);
             this.lblRoundNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRoundNumber.Name = "lblRoundNumber";
-            this.lblRoundNumber.Size = new System.Drawing.Size(73, 42);
+            this.lblRoundNumber.Size = new System.Drawing.Size(61, 33);
             this.lblRoundNumber.TabIndex = 0;
             this.lblRoundNumber.Text = "0/0";
             this.lblRoundNumber.SizeChanged += new System.EventHandler(this.lblRoundNumber_SizeChanged);
@@ -379,6 +380,7 @@
             // 
             // gbCards
             // 
+            this.gbCards.BackColor = System.Drawing.Color.Transparent;
             this.gbCards.Controls.Add(this.btn5);
             this.gbCards.Controls.Add(this.btn3);
             this.gbCards.Controls.Add(this.btn2);
@@ -388,11 +390,27 @@
             this.gbCards.Controls.Add(this.btn4);
             this.gbCards.Controls.Add(this.btn8);
             this.gbCards.Controls.Add(this.btn9);
-            this.gbCards.Location = new System.Drawing.Point(574, 86);
+            this.gbCards.Controls.Add(this.lblShadow);
+            this.gbCards.Location = new System.Drawing.Point(574, 103);
             this.gbCards.Name = "gbCards";
-            this.gbCards.Size = new System.Drawing.Size(376, 407);
+            this.gbCards.Size = new System.Drawing.Size(376, 406);
             this.gbCards.TabIndex = 28;
             this.gbCards.TabStop = false;
+            // 
+            // lblShadow
+            // 
+            this.lblShadow.AutoSize = true;
+            this.lblShadow.BackColor = System.Drawing.Color.Transparent;
+            this.lblShadow.Font = new System.Drawing.Font("Showcard Gothic", 350F, System.Drawing.FontStyle.Bold);
+            this.lblShadow.ForeColor = System.Drawing.Color.Transparent;
+            this.lblShadow.Location = new System.Drawing.Point(-77, -100);
+            this.lblShadow.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblShadow.Name = "lblShadow";
+            this.lblShadow.Size = new System.Drawing.Size(586, 578);
+            this.lblShadow.TabIndex = 2;
+            this.lblShadow.Tag = "x";
+            this.lblShadow.Text = "x";
+            this.lblShadow.Click += new System.EventHandler(this.lblShadow_Click);
             // 
             // lblFinalRound
             // 
@@ -400,10 +418,10 @@
             this.lblFinalRound.BackColor = System.Drawing.Color.Transparent;
             this.lblFinalRound.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFinalRound.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(228)))), ((int)(((byte)(46)))));
-            this.lblFinalRound.Location = new System.Drawing.Point(108, 106);
+            this.lblFinalRound.Location = new System.Drawing.Point(106, 100);
             this.lblFinalRound.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFinalRound.Name = "lblFinalRound";
-            this.lblFinalRound.Size = new System.Drawing.Size(239, 42);
+            this.lblFinalRound.Size = new System.Drawing.Size(200, 33);
             this.lblFinalRound.TabIndex = 0;
             this.lblFinalRound.Text = "Final round";
             this.lblFinalRound.Visible = false;
@@ -417,7 +435,7 @@
             this.lblDrawTimes.Location = new System.Drawing.Point(520, 559);
             this.lblDrawTimes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDrawTimes.Name = "lblDrawTimes";
-            this.lblDrawTimes.Size = new System.Drawing.Size(38, 42);
+            this.lblDrawTimes.Size = new System.Drawing.Size(32, 33);
             this.lblDrawTimes.TabIndex = 31;
             this.lblDrawTimes.Text = "0";
             this.lblDrawTimes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -431,7 +449,7 @@
             this.label3.Location = new System.Drawing.Point(384, 559);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(136, 42);
+            this.label3.Size = new System.Drawing.Size(112, 33);
             this.label3.TabIndex = 31;
             this.label3.Text = "Draw:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -531,7 +549,7 @@
             this.chkAutoRestart.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.chkAutoRestart.Location = new System.Drawing.Point(163, 515);
             this.chkAutoRestart.Name = "chkAutoRestart";
-            this.chkAutoRestart.Size = new System.Drawing.Size(125, 24);
+            this.chkAutoRestart.Size = new System.Drawing.Size(106, 21);
             this.chkAutoRestart.TabIndex = 53;
             this.chkAutoRestart.Text = "Auto Restart";
             this.chkAutoRestart.UseVisualStyleBackColor = true;
@@ -539,7 +557,7 @@
             // 
             // frmTicTacToeGame
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(27)))), ((int)(((byte)(209)))));
             this.ClientSize = new System.Drawing.Size(1000, 637);
@@ -568,11 +586,12 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmTicTacToeGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Tic-Tac-Toe Game";
+            this.Text = "5";
             this.Load += new System.EventHandler(this.frmTicTacToeGame_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.gbCards.ResumeLayout(false);
+            this.gbCards.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -612,6 +631,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnBackToMain;
         private System.Windows.Forms.CheckBox chkAutoRestart;
+        private System.Windows.Forms.Label lblShadow;
     }
 }
 

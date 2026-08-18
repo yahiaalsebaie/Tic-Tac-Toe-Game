@@ -144,7 +144,7 @@ namespace _3.Tic_Tac_Toe_Game
                 btn.Text = "X";
                 btn.Tag = "X";
                 btn.ForeColor = Color.DarkSalmon;
-
+                lblShadow.Text = "O";
                 lblTurnPlayer.Text = _player2Name;
 
                 CurrentPlayer = enPlayer.Player2;
@@ -153,6 +153,7 @@ namespace _3.Tic_Tac_Toe_Game
             {
                 btn.Text = "O";
                 btn.Tag = "O";
+                lblShadow.Text = "X";
                 btn.ForeColor = Color.White;
 
                 lblTurnPlayer.Text = _player1Name;
@@ -330,6 +331,15 @@ namespace _3.Tic_Tac_Toe_Game
         }
         private void frmTicTacToeGame_Load(object sender, EventArgs e)
         {
+            gbCards.Parent = this;
+            lblShadow.Parent = gbCards;
+            lblShadow.ForeColor = Color.FromArgb(50, 200,50,50);
+            lblShadow.BackColor = Color.Transparent;
+            //lblShadow.Parent = this;
+            lblTitle.Parent = this;
+            lblTurnPlayer.Parent = this;
+            lblWinner.Parent = this;
+            lblRoundNumber.Parent = this;
 
             GameStatus.Winner = enWinner.GameInProgress;
 
@@ -411,6 +421,11 @@ namespace _3.Tic_Tac_Toe_Game
             Button selectedButton = availableButtons[randomIndex];
 
             ChangeXorO(selectedButton);
+
+        }
+
+        private void lblShadow_Click(object sender, EventArgs e)
+        {
 
         }
     }
