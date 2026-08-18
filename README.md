@@ -59,5 +59,6 @@ This project is available at the repository above.
 
 ---
 
-**Created**: 2026  **By**: Yahia Alsebaie
+**Created**: 2026  **By**: Yahia Alsebaie.
+
 **Game Type**: Educational/Entertainment
