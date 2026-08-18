@@ -490,7 +490,7 @@
             // 
             // btnBackToMain
             // 
-            this.btnBackToMain.BackgroundImage = global::_3.Tic_Tac_Toe_Game.Properties.Resources.Settings;
+            this.btnBackToMain.BackgroundImage = global::_3.Tic_Tac_Toe_Game.Properties.Resources.BackToSettings;
             this.btnBackToMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnBackToMain.FlatAppearance.BorderSize = 0;
             this.btnBackToMain.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(129)))), ((int)(((byte)(175)))));

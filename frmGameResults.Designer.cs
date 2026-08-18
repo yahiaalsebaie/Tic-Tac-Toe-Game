@@ -44,8 +44,8 @@
             this.lblP2Name = new System.Windows.Forms.Label();
             this.lblP1Wins = new System.Windows.Forms.Label();
             this.lblP2Wins = new System.Windows.Forms.Label();
-            this.btnClose = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,11 +77,14 @@
             // btnRestartGame
             // 
             this.btnRestartGame.Font = new System.Drawing.Font("Papyrus", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRestartGame.Image = global::_3.Tic_Tac_Toe_Game.Properties.Resources.Restart;
+            this.btnRestartGame.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnRestartGame.Location = new System.Drawing.Point(98, 358);
             this.btnRestartGame.Name = "btnRestartGame";
             this.btnRestartGame.Size = new System.Drawing.Size(184, 64);
             this.btnRestartGame.TabIndex = 40;
             this.btnRestartGame.Text = "Restart Game";
+            this.btnRestartGame.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRestartGame.UseVisualStyleBackColor = true;
             this.btnRestartGame.Click += new System.EventHandler(this.btnRestartGame_Click);
             // 
@@ -137,12 +140,15 @@
             // 
             // btnMain
             // 
-            this.btnMain.Font = new System.Drawing.Font("Papyrus", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMain.Font = new System.Drawing.Font("Papyrus", 14.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMain.Image = global::_3.Tic_Tac_Toe_Game.Properties.Resources.Return;
+            this.btnMain.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnMain.Location = new System.Drawing.Point(361, 358);
             this.btnMain.Name = "btnMain";
             this.btnMain.Size = new System.Drawing.Size(184, 64);
             this.btnMain.TabIndex = 40;
             this.btnMain.Text = "Back To Main";
+            this.btnMain.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMain.UseVisualStyleBackColor = true;
             this.btnMain.Click += new System.EventHandler(this.btnMain_Click);
             // 
@@ -157,9 +163,9 @@
             this.groupBox2.Font = new System.Drawing.Font("Papyrus", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBox2.Location = new System.Drawing.Point(98, 137);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(448, 89);
             this.groupBox2.TabIndex = 48;
             this.groupBox2.TabStop = false;
@@ -243,6 +249,21 @@
             this.lblP2Wins.Text = "0";
             this.lblP2Wins.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::_3.Tic_Tac_Toe_Game.Properties.Resources.Minimize_Window;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumAquamarine;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(602, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(28, 39);
+            this.button1.TabIndex = 53;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // btnClose
             // 
             this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
@@ -252,27 +273,12 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Image = global::_3.Tic_Tac_Toe_Game.Properties.Resources.Close_Window4;
             this.btnClose.Location = new System.Drawing.Point(629, 2);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(38, 39);
             this.btnClose.TabIndex = 52;
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click_1);
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::_3.Tic_Tac_Toe_Game.Properties.Resources.Minimize_Window;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumAquamarine;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(602, 2);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(28, 39);
-            this.button1.TabIndex = 53;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmGameResults
             // 
@@ -292,7 +298,7 @@
             this.Controls.Add(this.lblRoundNumber);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmGameResults";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmGameResults";
