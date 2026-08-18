@@ -55,13 +55,14 @@
             this.lblFinalRound = new System.Windows.Forms.Label();
             this.lblDrawTimes = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.chkAutoRestart = new System.Windows.Forms.CheckBox();
+            this.btnUseNumpad = new System.Windows.Forms.Button();
             this.btnBackToMain = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnBackToDefault = new System.Windows.Forms.Button();
             this.btnChangeColorMode = new System.Windows.Forms.Button();
             this.btnRestartRound = new System.Windows.Forms.Button();
-            this.chkAutoRestart = new System.Windows.Forms.CheckBox();
             this.groupBox2.SuspendLayout();
             this.gbCards.SuspendLayout();
             this.SuspendLayout();
@@ -241,7 +242,7 @@
             this.btn9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn9.Font = new System.Drawing.Font("Ravie", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn9.ForeColor = System.Drawing.Color.Red;
-            this.btn9.Location = new System.Drawing.Point(274, 290);
+            this.btn9.Location = new System.Drawing.Point(274, 30);
             this.btn9.Margin = new System.Windows.Forms.Padding(4);
             this.btn9.Name = "btn9";
             this.btn9.Size = new System.Drawing.Size(94, 94);
@@ -257,7 +258,7 @@
             this.btn8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn8.Font = new System.Drawing.Font("Ravie", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn8.ForeColor = System.Drawing.Color.Red;
-            this.btn8.Location = new System.Drawing.Point(144, 290);
+            this.btn8.Location = new System.Drawing.Point(144, 30);
             this.btn8.Margin = new System.Windows.Forms.Padding(4);
             this.btn8.Name = "btn8";
             this.btn8.Size = new System.Drawing.Size(94, 94);
@@ -289,7 +290,7 @@
             this.btn7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn7.Font = new System.Drawing.Font("Ravie", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn7.ForeColor = System.Drawing.Color.Red;
-            this.btn7.Location = new System.Drawing.Point(14, 290);
+            this.btn7.Location = new System.Drawing.Point(14, 30);
             this.btn7.Margin = new System.Windows.Forms.Padding(4);
             this.btn7.Name = "btn7";
             this.btn7.Size = new System.Drawing.Size(94, 94);
@@ -321,7 +322,7 @@
             this.btn1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn1.Font = new System.Drawing.Font("Ravie", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn1.ForeColor = System.Drawing.Color.Red;
-            this.btn1.Location = new System.Drawing.Point(14, 27);
+            this.btn1.Location = new System.Drawing.Point(14, 289);
             this.btn1.Margin = new System.Windows.Forms.Padding(4);
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(94, 94);
@@ -337,7 +338,7 @@
             this.btn2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn2.Font = new System.Drawing.Font("Ravie", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn2.ForeColor = System.Drawing.Color.Red;
-            this.btn2.Location = new System.Drawing.Point(144, 27);
+            this.btn2.Location = new System.Drawing.Point(144, 289);
             this.btn2.Margin = new System.Windows.Forms.Padding(4);
             this.btn2.Name = "btn2";
             this.btn2.Size = new System.Drawing.Size(94, 94);
@@ -353,7 +354,7 @@
             this.btn3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn3.Font = new System.Drawing.Font("Ravie", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn3.ForeColor = System.Drawing.Color.Red;
-            this.btn3.Location = new System.Drawing.Point(274, 27);
+            this.btn3.Location = new System.Drawing.Point(274, 289);
             this.btn3.Margin = new System.Windows.Forms.Padding(4);
             this.btn3.Name = "btn3";
             this.btn3.Size = new System.Drawing.Size(94, 94);
@@ -382,15 +383,15 @@
             // gbCards
             // 
             this.gbCards.BackColor = System.Drawing.Color.Transparent;
+            this.gbCards.Controls.Add(this.btn7);
+            this.gbCards.Controls.Add(this.btn9);
+            this.gbCards.Controls.Add(this.btn8);
             this.gbCards.Controls.Add(this.btn5);
             this.gbCards.Controls.Add(this.btn3);
             this.gbCards.Controls.Add(this.btn2);
             this.gbCards.Controls.Add(this.btn1);
             this.gbCards.Controls.Add(this.btn6);
-            this.gbCards.Controls.Add(this.btn7);
             this.gbCards.Controls.Add(this.btn4);
-            this.gbCards.Controls.Add(this.btn8);
-            this.gbCards.Controls.Add(this.btn9);
             this.gbCards.Controls.Add(this.lblShadow);
             this.gbCards.Location = new System.Drawing.Point(574, 103);
             this.gbCards.Name = "gbCards";
@@ -411,7 +412,6 @@
             this.lblShadow.TabIndex = 2;
             this.lblShadow.Tag = "x";
             this.lblShadow.Text = "x";
-            this.lblShadow.Click += new System.EventHandler(this.lblShadow_Click);
             // 
             // lblFinalRound
             // 
@@ -454,6 +454,39 @@
             this.label3.TabIndex = 31;
             this.label3.Text = "Draw:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // chkAutoRestart
+            // 
+            this.chkAutoRestart.AutoSize = true;
+            this.chkAutoRestart.Checked = true;
+            this.chkAutoRestart.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkAutoRestart.FlatAppearance.BorderSize = 2;
+            this.chkAutoRestart.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.chkAutoRestart.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.chkAutoRestart.Font = new System.Drawing.Font("Papyrus", 10.2F, System.Drawing.FontStyle.Bold);
+            this.chkAutoRestart.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.chkAutoRestart.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.chkAutoRestart.Location = new System.Drawing.Point(163, 515);
+            this.chkAutoRestart.Name = "chkAutoRestart";
+            this.chkAutoRestart.Size = new System.Drawing.Size(127, 26);
+            this.chkAutoRestart.TabIndex = 53;
+            this.chkAutoRestart.Text = "Auto Restart";
+            this.chkAutoRestart.UseVisualStyleBackColor = true;
+            this.chkAutoRestart.CheckedChanged += new System.EventHandler(this.chkAutoRestart_CheckedChanged);
+            // 
+            // btnUseNumpad
+            // 
+            this.btnUseNumpad.BackgroundImage = global::_3.Tic_Tac_Toe_Game.Properties.Resources.Keypad;
+            this.btnUseNumpad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnUseNumpad.FlatAppearance.BorderSize = 0;
+            this.btnUseNumpad.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(129)))), ((int)(((byte)(175)))));
+            this.btnUseNumpad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUseNumpad.Location = new System.Drawing.Point(50, 3);
+            this.btnUseNumpad.Name = "btnUseNumpad";
+            this.btnUseNumpad.Size = new System.Drawing.Size(42, 48);
+            this.btnUseNumpad.TabIndex = 52;
+            this.btnUseNumpad.UseVisualStyleBackColor = true;
+            this.btnUseNumpad.Click += new System.EventHandler(this.btnUseNumpad_Click);
             // 
             // btnBackToMain
             // 
@@ -540,25 +573,6 @@
             this.btnRestartRound.UseVisualStyleBackColor = true;
             this.btnRestartRound.Click += new System.EventHandler(this.btnRestartRound_Click);
             // 
-            // chkAutoRestart
-            // 
-            this.chkAutoRestart.AutoSize = true;
-            this.chkAutoRestart.Checked = true;
-            this.chkAutoRestart.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkAutoRestart.FlatAppearance.BorderSize = 2;
-            this.chkAutoRestart.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.chkAutoRestart.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.chkAutoRestart.Font = new System.Drawing.Font("Papyrus", 10.2F, System.Drawing.FontStyle.Bold);
-            this.chkAutoRestart.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.chkAutoRestart.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.chkAutoRestart.Location = new System.Drawing.Point(163, 515);
-            this.chkAutoRestart.Name = "chkAutoRestart";
-            this.chkAutoRestart.Size = new System.Drawing.Size(127, 26);
-            this.chkAutoRestart.TabIndex = 53;
-            this.chkAutoRestart.Text = "Auto Restart";
-            this.chkAutoRestart.UseVisualStyleBackColor = true;
-            this.chkAutoRestart.CheckedChanged += new System.EventHandler(this.chkAutoRestart_CheckedChanged);
-            // 
             // frmTicTacToeGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -566,6 +580,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(27)))), ((int)(((byte)(209)))));
             this.ClientSize = new System.Drawing.Size(1000, 637);
             this.Controls.Add(this.chkAutoRestart);
+            this.Controls.Add(this.btnUseNumpad);
             this.Controls.Add(this.btnBackToMain);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnClose);
@@ -587,11 +602,13 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmTicTacToeGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "5";
             this.Load += new System.EventHandler(this.frmTicTacToeGame_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmTicTacToeGame_KeyDown);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.gbCards.ResumeLayout(false);
@@ -636,6 +653,7 @@
         private System.Windows.Forms.Button btnBackToMain;
         private System.Windows.Forms.CheckBox chkAutoRestart;
         private System.Windows.Forms.Label lblShadow;
+        private System.Windows.Forms.Button btnUseNumpad;
     }
 }
 

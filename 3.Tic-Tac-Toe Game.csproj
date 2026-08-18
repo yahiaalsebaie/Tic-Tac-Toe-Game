@@ -126,5 +126,11 @@
   <ItemGroup>
     <None Include="Resources\Restart.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Keypad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KeypadLock.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -4,6 +4,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using _3.Tic_Tac_Toe_Game.Properties;
 // جرب تخلي اللاعب يخار في الأول هل يلاعب حد معاه ولا الكومبيوتر 
 // الكومبيوتر بيختار عشوائي من 1:9 والمستوى التاني عشوائي بررده بس من طرق الفوز ينقي ما بينهم
 // ممكن أضيف هيستوري للجيم 
@@ -25,6 +26,7 @@ namespace _3.Tic_Tac_Toe_Game
         private byte _player2WinTimes = 0;
         private byte _drawTimes = 0;
 
+        private bool _useNumpad = true;
         public frmTicTacToeGame()
         {
             InitializeComponent();
@@ -333,7 +335,7 @@ namespace _3.Tic_Tac_Toe_Game
         {
             gbCards.Parent = this;
             lblShadow.Parent = gbCards;
-            lblShadow.ForeColor = Color.FromArgb(50, 200,50,50);
+            lblShadow.ForeColor = Color.FromArgb(50, 200, 50, 50);
             lblShadow.BackColor = Color.Transparent;
             //lblShadow.Parent = this;
             lblTitle.Parent = this;
@@ -349,6 +351,9 @@ namespace _3.Tic_Tac_Toe_Game
             lblTurnPlayer.Text = _player1Name.Trim();
             lblGDplayer1.Text = _player1Name.Trim();
             lblGDplayer2.Text = _player2Name.Trim();
+
+
+
 
             if (_howManyRounds == -1)
             {
@@ -424,8 +429,64 @@ namespace _3.Tic_Tac_Toe_Game
 
         }
 
-        private void lblShadow_Click(object sender, EventArgs e)
+        private void btnUseNumpad_Click(object sender, EventArgs e)
         {
+            _useNumpad = !_useNumpad;
+            if (_useNumpad) btnUseNumpad.BackgroundImage = Resources.Keypad;
+            else btnUseNumpad.BackgroundImage = Resources.KeypadLock;
+        }
+
+        private void frmTicTacToeGame_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (!_useNumpad) return;
+
+            Button selectedButton = null;
+
+            switch (e.KeyCode)
+            {
+                case Keys.NumPad1:
+                    selectedButton = btn1;
+                    break;
+
+                case Keys.NumPad2:
+                    selectedButton = btn2;
+                    break;
+
+                case Keys.NumPad3:
+                    selectedButton = btn3;
+                    break;
+
+                case Keys.NumPad4:
+                    selectedButton = btn4;
+                    break;
+
+                case Keys.NumPad5:
+                    selectedButton = btn5;
+                    break;
+
+                case Keys.NumPad6:
+                    selectedButton = btn6;
+                    break;
+
+                case Keys.NumPad7:
+                    selectedButton = btn7;
+                    break;
+
+                case Keys.NumPad8:
+                    selectedButton = btn8;
+                    break;
+
+                case Keys.NumPad9:
+                    selectedButton = btn9;
+                    break;
+            }
+
+            if (selectedButton != null)
+            {
+                ChangeXorO(selectedButton);
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+            }
 
         }
     }
