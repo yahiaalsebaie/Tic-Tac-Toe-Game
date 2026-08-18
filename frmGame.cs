@@ -47,7 +47,6 @@ namespace _3.Tic_Tac_Toe_Game
         {
             Player1, Player2
         }
-        
         public enum enWinner
         {
             Player1, Player2, Draw, GameInProgress
@@ -108,6 +107,7 @@ namespace _3.Tic_Tac_Toe_Game
             if (CheckValues(btn1, btn5, btn9)) return;
             if (CheckValues(btn3, btn5, btn7)) return;
 
+            ComputerPlay();
 
             // Draw
             if (GameStatus.PlayCount == 9)
@@ -337,6 +337,9 @@ namespace _3.Tic_Tac_Toe_Game
             GameStatus.PlayCount = 0;
 
             lblTurnPlayer.Text = _player1Name.Trim();
+            lblGDplayer1.Text = _player1Name.Trim();
+            lblGDplayer2.Text = _player2Name.Trim();
+
             if (_howManyRounds == -1)
             {
                 lblRoundNumber.Text = "Infinite Rounds";
@@ -395,10 +398,10 @@ namespace _3.Tic_Tac_Toe_Game
         private void lblWinner_SizeChanged(object sender, EventArgs e)
         {
             CenterObjOverObj(lblWinner, btnRestartRound);
-
         }
         private void ComputerPlay()
         {
+            if (CurrentPlayer == enPlayer.Player1) return;
             List<Button> availableButtons = gbCards.Controls.OfType<Button>().Where(B => B.Tag?.ToString() == "?").ToList();
             if (availableButtons.Count == 0) { return; }
             Random random = new Random();

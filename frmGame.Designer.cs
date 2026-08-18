@@ -34,10 +34,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblWinner = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblGDplayer1 = new System.Windows.Forms.Label();
             this.lblP1Wins = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblGDplayer2 = new System.Windows.Forms.Label();
             this.lblP2Wins = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblRoundNumber = new System.Windows.Forms.Label();
@@ -135,19 +135,19 @@
             this.lblTitle.TabIndex = 14;
             this.lblTitle.Text = "Tic-Tac-Toe Game";
             // 
-            // label4
+            // lblGDplayer1
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(202)))), ((int)(((byte)(228)))));
-            this.label4.Location = new System.Drawing.Point(14, 23);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(163, 42);
-            this.label4.TabIndex = 30;
-            this.label4.Tag = "Player1";
-            this.label4.Text = "Player1";
+            this.lblGDplayer1.AutoSize = true;
+            this.lblGDplayer1.BackColor = System.Drawing.Color.Transparent;
+            this.lblGDplayer1.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGDplayer1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(202)))), ((int)(((byte)(228)))));
+            this.lblGDplayer1.Location = new System.Drawing.Point(14, 23);
+            this.lblGDplayer1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblGDplayer1.Name = "lblGDplayer1";
+            this.lblGDplayer1.Size = new System.Drawing.Size(163, 42);
+            this.lblGDplayer1.TabIndex = 30;
+            this.lblGDplayer1.Tag = "Player1";
+            this.lblGDplayer1.Text = "Player1";
             // 
             // lblP1Wins
             // 
@@ -177,19 +177,19 @@
             this.label6.Tag = "Player1";
             this.label6.Text = "Player1";
             // 
-            // label7
+            // lblGDplayer2
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(202)))), ((int)(((byte)(228)))));
-            this.label7.Location = new System.Drawing.Point(212, 23);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(164, 42);
-            this.label7.TabIndex = 32;
-            this.label7.Tag = "Player2";
-            this.label7.Text = "Player2";
+            this.lblGDplayer2.AutoSize = true;
+            this.lblGDplayer2.BackColor = System.Drawing.Color.Transparent;
+            this.lblGDplayer2.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGDplayer2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(202)))), ((int)(((byte)(228)))));
+            this.lblGDplayer2.Location = new System.Drawing.Point(212, 23);
+            this.lblGDplayer2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblGDplayer2.Name = "lblGDplayer2";
+            this.lblGDplayer2.Size = new System.Drawing.Size(164, 42);
+            this.lblGDplayer2.TabIndex = 32;
+            this.lblGDplayer2.Tag = "Player2";
+            this.lblGDplayer2.Text = "Player2";
             // 
             // lblP2Wins
             // 
@@ -207,8 +207,8 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.lblGDplayer1);
+            this.groupBox2.Controls.Add(this.lblGDplayer2);
             this.groupBox2.Controls.Add(this.lblP1Wins);
             this.groupBox2.Controls.Add(this.lblP2Wins);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.Control;
@@ -588,10 +588,10 @@
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Button btnBackToDefault;
         private System.Windows.Forms.Button btnChangeColorMode;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblGDplayer1;
         private System.Windows.Forms.Label lblP1Wins;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblGDplayer2;
         private System.Windows.Forms.Label lblP2Wins;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label lblRoundNumber;
