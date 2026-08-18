@@ -5,11 +5,22 @@ A Windows Forms-based Tic-Tac-Toe game built with C# and .NET Framework 4.7.2. P
 ## Features
 
 - **Single Player Mode**: Play against a computer opponent with AI logic
+- <img width="1036" height="725" alt="Single Player Mode" src="https://github.com/user-attachments/assets/17f302ad-c54d-4680-b280-c55383f86a77" />
 - **Multiplayer Mode**: Challenge another player on the same machine
+- <img width="1036" height="725" alt="Multiplayer Mode" src="https://github.com/user-attachments/assets/f5a0d50c-1d74-4566-9ecb-bff658582a56" />
 - **Customizable Rounds**: Set the number of rounds you want to play
+- <img width="1036" height="725" alt="Customizable Rounds and Start Game" src="https://github.com/user-attachments/assets/68f5ec5a-d07c-423c-a2dc-99eda602247f" />
 - **Game Statistics**: Track wins and results across multiple rounds
 - **Custom Cursors**: Enhanced user experience with themed cursor graphics
 - **Clean UI**: Intuitive Windows Forms interface with visual feedback
+<img width="1920" height="1080" alt="Change theme colors" src="https://github.com/user-attachments/assets/4b928bbe-60a0-47e8-be6d-b1f3cbe4d839" />
+<img width="1250" height="796" alt="Use numpad or mouse to play" src="https://github.com/user-attachments/assets/2fb5eed3-eafa-4bef-a61d-f4594bf3071c" />
+
+
+
+
+
+
 
 ## System Requirements
 
