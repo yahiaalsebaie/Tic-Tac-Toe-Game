@@ -79,5 +79,16 @@ namespace _3.Tic_Tac_Toe_Game
         {
             this.Close();
         }
+        private void CenterObjOverObj(Control obj1, Control obj2)
+        {
+            obj1.AutoSize = true;
+
+            obj1.Left = obj2.Left + (obj2.Width - obj1.Width) / 2;
+        }
+
+        private void lblWinnerPlayer_TextChanged(object sender, EventArgs e)
+        {
+            CenterObjOverObj(lblWinnerPlayer, lblTitle);
+        }
     }
 }

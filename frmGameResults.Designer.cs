@@ -107,13 +107,14 @@
             this.lblWinnerPlayer.BackColor = System.Drawing.Color.Transparent;
             this.lblWinnerPlayer.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWinnerPlayer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(202)))), ((int)(((byte)(228)))));
-            this.lblWinnerPlayer.Location = new System.Drawing.Point(351, 347);
+            this.lblWinnerPlayer.Location = new System.Drawing.Point(347, 347);
             this.lblWinnerPlayer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWinnerPlayer.Name = "lblWinnerPlayer";
             this.lblWinnerPlayer.Size = new System.Drawing.Size(163, 42);
             this.lblWinnerPlayer.TabIndex = 37;
             this.lblWinnerPlayer.Tag = "Player1";
             this.lblWinnerPlayer.Text = "Player1";
+            this.lblWinnerPlayer.TextChanged += new System.EventHandler(this.lblWinnerPlayer_TextChanged);
             // 
             // lblRoundNumber
             // 

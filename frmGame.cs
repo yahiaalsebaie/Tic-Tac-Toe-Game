@@ -107,7 +107,7 @@ namespace _3.Tic_Tac_Toe_Game
             if (CheckValues(btn1, btn5, btn9)) return;
             if (CheckValues(btn3, btn5, btn7)) return;
 
-            ComputerPlay();
+            if (_howManyRounds == -1) ComputerPlay();
 
             // Draw
             if (GameStatus.PlayCount == 9)
@@ -119,7 +119,7 @@ namespace _3.Tic_Tac_Toe_Game
 
                 lblWinner.Text = "Draw";
 
-                MessageBox.Show( "It's Draw!","Game Over",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
+                MessageBox.Show("It's Draw!", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
                 UpdateWinnerScore();
                 EndRound();
