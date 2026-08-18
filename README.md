@@ -57,11 +57,7 @@ A Windows Forms-based Tic-Tac-Toe game built with C# and .NET Framework 4.7.2. P
 
 This project is available at the repository above.
 
-## Contributing
-
-For contributions and development guidelines, refer to CONTRIBUTING.md
-
 ---
 
-**Created**: 2026  
+**Created**: 2026  **By**: Yahia Alsebaie
 **Game Type**: Educational/Entertainment
