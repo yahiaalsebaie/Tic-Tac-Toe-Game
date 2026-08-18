@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using _3.Tic_Tac_Toe_Game.Properties;
@@ -27,6 +28,9 @@ namespace _3.Tic_Tac_Toe_Game
         private byte _drawTimes = 0;
 
         private bool _useNumpad = true;
+
+        private Cursor _pointerCursor;
+        private Cursor _handCursor;
         public frmTicTacToeGame()
         {
             InitializeComponent();
@@ -333,6 +337,17 @@ namespace _3.Tic_Tac_Toe_Game
         }
         private void frmTicTacToeGame_Load(object sender, EventArgs e)
         {
+            string cursorFolder = Path.Combine(Application.StartupPath, "Cursors");
+
+            _pointerCursor = new Cursor(Path.Combine(cursorFolder, "Cursor (32).cur"));
+
+            _handCursor = new Cursor(Path.Combine(cursorFolder, "Hand-Cursor (32).cur"));
+
+            this.Cursor = _pointerCursor;
+            
+
+
+
             gbCards.Parent = this;
             lblShadow.Parent = gbCards;
             lblShadow.ForeColor = Color.FromArgb(50, 200, 50, 50);
@@ -358,6 +373,7 @@ namespace _3.Tic_Tac_Toe_Game
             if (_howManyRounds == -1)
             {
                 lblRoundNumber.Text = "Infinite Rounds";
+                lblRoundTitle.Visible = false;
                 //CenterLabelOverButton(lblRoundNumber, btnRestartRound); 
             }
             else
@@ -366,8 +382,12 @@ namespace _3.Tic_Tac_Toe_Game
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            _frmMain.Show();
-            this.Close();
+            if (MessageBox.Show("Are You Sure?", "Close[x]", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                _frmMain.Show();
+                this.Close();
+            }
+            else return;
         }
 
         private void btnMinimize_Click(object sender, EventArgs e)
@@ -488,6 +508,26 @@ namespace _3.Tic_Tac_Toe_Game
                 e.SuppressKeyPress = true;
             }
 
+        }
+
+        private void lblRoundNumber_Click(object sender, EventArgs e)
+        {
+            CenterObjOverObj(lblRoundNumber, btnRestartRound);
+        }
+
+        private void lblFinalRound_TextChanged(object sender, EventArgs e)
+        {
+            CenterObjOverObj(lblFinalRound, btnRestartRound);
+        }
+
+        private void btn9_MouseEnter(object sender, EventArgs e)
+        {
+            ((Control)sender).Cursor = _handCursor;
+        }
+
+        private void btn9_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = _pointerCursor;
         }
     }
 }

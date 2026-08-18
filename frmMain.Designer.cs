@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.btnStartGame = new System.Windows.Forms.Button();
             this.lblPlayer2Title = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,10 +42,12 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.gbDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnStartGame
@@ -58,6 +61,7 @@
             this.btnStartGame.Text = "Start Game";
             this.btnStartGame.UseVisualStyleBackColor = true;
             this.btnStartGame.Click += new System.EventHandler(this.btnStartGame_Click);
+            this.btnStartGame.MouseEnter += new System.EventHandler(this.btnStartGame_MouseEnter);
             // 
             // lblPlayer2Title
             // 
@@ -120,6 +124,7 @@
             this.txtPlayer1Name.Text = "Player1";
             this.txtPlayer1Name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtPlayer1Name.WordWrap = false;
+            this.txtPlayer1Name.MouseEnter += new System.EventHandler(this.txtPlayer2Name_MouseEnter);
             // 
             // rbComputer
             // 
@@ -135,6 +140,7 @@
             this.rbComputer.Text = "Computer";
             this.rbComputer.UseVisualStyleBackColor = true;
             this.rbComputer.CheckedChanged += new System.EventHandler(this.rbComputer_CheckedChanged);
+            this.rbComputer.MouseEnter += new System.EventHandler(this.btnStartGame_MouseEnter);
             // 
             // txtPlayer2Name
             // 
@@ -149,6 +155,7 @@
             this.txtPlayer2Name.Text = "Player2";
             this.txtPlayer2Name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtPlayer2Name.WordWrap = false;
+            this.txtPlayer2Name.MouseEnter += new System.EventHandler(this.txtPlayer2Name_MouseEnter);
             // 
             // rbFriend
             // 
@@ -164,6 +171,7 @@
             this.rbFriend.TabStop = true;
             this.rbFriend.Text = "Friend";
             this.rbFriend.UseVisualStyleBackColor = true;
+            this.rbFriend.MouseEnter += new System.EventHandler(this.btnStartGame_MouseEnter);
             // 
             // gbDetails
             // 
@@ -196,9 +204,11 @@
             this.checkBox1.Text = "Open";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.checkBox1.MouseEnter += new System.EventHandler(this.btnStartGame_MouseEnter);
             // 
             // numericUpDown1
             // 
+            this.numericUpDown1.Cursor = System.Windows.Forms.Cursors.Default;
             this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F);
             this.numericUpDown1.Location = new System.Drawing.Point(479, 80);
             this.numericUpDown1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -223,11 +233,23 @@
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.Snow;
-            this.lblTitle.Location = new System.Drawing.Point(247, 65);
+            this.lblTitle.Location = new System.Drawing.Point(276, 22);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(273, 33);
             this.lblTitle.TabIndex = 54;
             this.lblTitle.Text = "Tic-Tac-Toe Game";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Image = global::_3.Tic_Tac_Toe_Game.Properties.Resources.XOGame;
+            this.pictureBox1.Location = new System.Drawing.Point(369, 58);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(96, 96);
+            this.pictureBox1.TabIndex = 57;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
+            this.pictureBox1.MouseHover += new System.EventHandler(this.pictureBox1_MouseHover);
             // 
             // button1
             // 
@@ -239,7 +261,7 @@
             this.button1.Location = new System.Drawing.Point(737, 7);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(37, 48);
-            this.button1.TabIndex = 56;
+            this.button1.TabIndex = 8;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -254,7 +276,7 @@
             this.btnClose.Location = new System.Drawing.Point(774, 7);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(51, 48);
-            this.btnClose.TabIndex = 55;
+            this.btnClose.TabIndex = 9;
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -264,6 +286,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(20)))), ((int)(((byte)(200)))));
             this.ClientSize = new System.Drawing.Size(829, 580);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblTitle);
@@ -274,13 +297,16 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.8F, System.Drawing.FontStyle.Underline);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMain";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.gbDetails.ResumeLayout(false);
             this.gbDetails.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -302,5 +328,6 @@
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

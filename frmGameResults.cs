@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Reflection.Emit;
 using System.Windows.Forms;
 
@@ -15,6 +16,9 @@ namespace _3.Tic_Tac_Toe_Game
         private byte _player1WinTimes = 0;
         private byte _player2WinTimes = 0;
         private byte _drawTimes = 0;
+
+        private Cursor _pointerCursor;
+        private Cursor _handCursor;
         public frmGameResults()
         {
             InitializeComponent();
@@ -60,6 +64,14 @@ namespace _3.Tic_Tac_Toe_Game
         }
         private void frmGameResults_Load(object sender, EventArgs e)
         {
+            string cursorFolder = Path.Combine(Application.StartupPath, "Cursors");
+
+            _pointerCursor = new Cursor(Path.Combine(cursorFolder, "Cursor (32).cur"));
+
+            _handCursor = new Cursor(Path.Combine(cursorFolder, "Hand-Cursor (32).cur"));
+
+            this.Cursor = _pointerCursor;
+
             lblRoundNumber.Text = _howManyRounds.ToString();
             if (_howManyRounds == 1) label1.Text = "Round.";
             lblP1Wins.Text = _player1WinTimes.ToString();
@@ -89,6 +101,11 @@ namespace _3.Tic_Tac_Toe_Game
         private void lblWinnerPlayer_TextChanged(object sender, EventArgs e)
         {
             CenterObjOverObj(lblWinnerPlayer, lblTitle);
+        }
+
+        private void frmGameResults_MouseEnter(object sender, EventArgs e)
+        {
+            ((Control)sender).Cursor = _handCursor;
         }
     }
 }

@@ -1,5 +1,7 @@
 ﻿using System;
+using System.IO;
 using System.Windows.Forms;
+using _3.Tic_Tac_Toe_Game.Properties;
 
 namespace _3.Tic_Tac_Toe_Game
 {
@@ -7,6 +9,9 @@ namespace _3.Tic_Tac_Toe_Game
     {
         private string _player2PrevName;
 
+        private Cursor _pointerCursor;
+        private Cursor _handCursor;
+        private Cursor _textCursor;
         public frmMain()
         {
             InitializeComponent();
@@ -67,6 +72,37 @@ namespace _3.Tic_Tac_Toe_Game
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            string cursorFolder = Path.Combine(Application.StartupPath, "Cursors");
+
+            _pointerCursor = new Cursor(Path.Combine(cursorFolder, "Cursor (32).cur"));
+            _handCursor = new Cursor(Path.Combine(cursorFolder, "Hand-Cursor (32).cur"));
+            _textCursor = new Cursor(Path.Combine(cursorFolder, "Text-Cursor.cur"));
+
+            this.Cursor = _pointerCursor;
+        }
+
+        private void btnStartGame_MouseEnter(object sender, EventArgs e)
+        {
+            ((Control)sender).Cursor = _handCursor;
+        }
+
+        private void pictureBox1_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox1.BackgroundImage = Resources.XOGame96;
+        }
+
+        private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox1.BackgroundImage = Resources.XOGame;
+        }
+
+        private void txtPlayer2Name_MouseEnter(object sender, EventArgs e)
+        {
+            ((Control)sender).Cursor = _textCursor;
         }
     }
 }

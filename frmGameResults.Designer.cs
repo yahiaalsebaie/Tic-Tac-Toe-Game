@@ -28,15 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGameResults));
             this.label6 = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.btnRestartGame = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.lblWinnerPlayer = new System.Windows.Forms.Label();
             this.lblRoundNumber = new System.Windows.Forms.Label();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnMain = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblP1Name = new System.Windows.Forms.Label();
             this.lblDrawTimes = new System.Windows.Forms.Label();
@@ -46,6 +44,8 @@
             this.lblP2Wins = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.btnMain = new System.Windows.Forms.Button();
+            this.btnRestartGame = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,20 +73,6 @@
             this.lblTitle.Size = new System.Drawing.Size(213, 33);
             this.lblTitle.TabIndex = 41;
             this.lblTitle.Text = "Game Resalts";
-            // 
-            // btnRestartGame
-            // 
-            this.btnRestartGame.Font = new System.Drawing.Font("Papyrus", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRestartGame.Image = global::_3.Tic_Tac_Toe_Game.Properties.Resources.Restart;
-            this.btnRestartGame.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRestartGame.Location = new System.Drawing.Point(98, 358);
-            this.btnRestartGame.Name = "btnRestartGame";
-            this.btnRestartGame.Size = new System.Drawing.Size(184, 64);
-            this.btnRestartGame.TabIndex = 40;
-            this.btnRestartGame.Text = "Restart Game";
-            this.btnRestartGame.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRestartGame.UseVisualStyleBackColor = true;
-            this.btnRestartGame.Click += new System.EventHandler(this.btnRestartGame_Click);
             // 
             // label2
             // 
@@ -137,20 +123,6 @@
             this.label1.Size = new System.Drawing.Size(129, 33);
             this.label1.TabIndex = 36;
             this.label1.Text = "Rounds";
-            // 
-            // btnMain
-            // 
-            this.btnMain.Font = new System.Drawing.Font("Papyrus", 14.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMain.Image = global::_3.Tic_Tac_Toe_Game.Properties.Resources.Return;
-            this.btnMain.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnMain.Location = new System.Drawing.Point(361, 358);
-            this.btnMain.Name = "btnMain";
-            this.btnMain.Size = new System.Drawing.Size(184, 64);
-            this.btnMain.TabIndex = 40;
-            this.btnMain.Text = "Back To Main";
-            this.btnMain.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMain.UseVisualStyleBackColor = true;
-            this.btnMain.Click += new System.EventHandler(this.btnMain_Click);
             // 
             // groupBox2
             // 
@@ -260,7 +232,7 @@
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(28, 39);
-            this.button1.TabIndex = 53;
+            this.button1.TabIndex = 3;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -276,9 +248,39 @@
             this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(38, 39);
-            this.btnClose.TabIndex = 52;
+            this.btnClose.TabIndex = 4;
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click_1);
+            // 
+            // btnMain
+            // 
+            this.btnMain.Font = new System.Drawing.Font("Papyrus", 14.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMain.Image = global::_3.Tic_Tac_Toe_Game.Properties.Resources.Return;
+            this.btnMain.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnMain.Location = new System.Drawing.Point(361, 358);
+            this.btnMain.Name = "btnMain";
+            this.btnMain.Size = new System.Drawing.Size(184, 64);
+            this.btnMain.TabIndex = 2;
+            this.btnMain.Text = "Back To Main";
+            this.btnMain.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMain.UseVisualStyleBackColor = true;
+            this.btnMain.Click += new System.EventHandler(this.btnMain_Click);
+            this.btnMain.MouseEnter += new System.EventHandler(this.frmGameResults_MouseEnter);
+            // 
+            // btnRestartGame
+            // 
+            this.btnRestartGame.Font = new System.Drawing.Font("Papyrus", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRestartGame.Image = global::_3.Tic_Tac_Toe_Game.Properties.Resources.Restart;
+            this.btnRestartGame.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRestartGame.Location = new System.Drawing.Point(98, 358);
+            this.btnRestartGame.Name = "btnRestartGame";
+            this.btnRestartGame.Size = new System.Drawing.Size(184, 64);
+            this.btnRestartGame.TabIndex = 1;
+            this.btnRestartGame.Text = "Restart Game";
+            this.btnRestartGame.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRestartGame.UseVisualStyleBackColor = true;
+            this.btnRestartGame.Click += new System.EventHandler(this.btnRestartGame_Click);
+            this.btnRestartGame.MouseEnter += new System.EventHandler(this.frmGameResults_MouseEnter);
             // 
             // frmGameResults
             // 
@@ -298,11 +300,13 @@
             this.Controls.Add(this.lblRoundNumber);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmGameResults";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmGameResults";
             this.Load += new System.EventHandler(this.frmGameResults_Load);
+            this.MouseEnter += new System.EventHandler(this.frmGameResults_MouseEnter);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -318,7 +322,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblWinnerPlayer;
         private System.Windows.Forms.Label lblRoundNumber;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnMain;
         private System.Windows.Forms.GroupBox groupBox2;
