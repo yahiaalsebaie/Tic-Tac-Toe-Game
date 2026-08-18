@@ -41,7 +41,6 @@
             this.lblP2Wins = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblRoundNumber = new System.Windows.Forms.Label();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.btn9 = new System.Windows.Forms.Button();
             this.btn8 = new System.Windows.Forms.Button();
             this.btn4 = new System.Windows.Forms.Button();
@@ -596,7 +595,6 @@
         private System.Windows.Forms.Label lblP2Wins;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label lblRoundNumber;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button btn9;
         private System.Windows.Forms.Button btn8;
         private System.Windows.Forms.Button btn4;
