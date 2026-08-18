@@ -18,11 +18,21 @@ namespace _3.Tic_Tac_Toe_Game
                 numericUpDown1.Enabled = false;
                 numericUpDown1.Value = -1;
             }
-            else numericUpDown1.Enabled = true;
+            else
+            {
+                numericUpDown1.Enabled = true;
+                numericUpDown1.Value = 1;
+            }
         }
 
         private void btnStartGame_Click(object sender, EventArgs e)
         {
+            if (numericUpDown1.Value == 0)
+            {
+                MessageBox.Show("Choose how many rounds to play first!", "Cannot play 0 rounds!",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                numericUpDown1.Value = 1;
+                return;
+            }
             frmTicTacToeGame frmTicTacToeGame = new frmTicTacToeGame(txtPlayer1Name.Text.Trim(), txtPlayer2Name.Text.Trim(), (sbyte)numericUpDown1.Value,this);
             this.Hide();
             frmTicTacToeGame.ShowDialog();

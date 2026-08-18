@@ -69,19 +69,19 @@
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.Snow;
-            this.lblTitle.Location = new System.Drawing.Point(280, 9);
+            this.lblTitle.Location = new System.Drawing.Point(299, 9);
             this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(332, 42);
+            this.lblTitle.Size = new System.Drawing.Size(258, 42);
             this.lblTitle.TabIndex = 41;
-            this.lblTitle.Text = "Tic-Tac-Toe Game";
+            this.lblTitle.Text = "Game Resalts";
             // 
-            // btnRestartRound
+            // btnRestartGame
             // 
             this.btnRestartGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnRestartGame.Location = new System.Drawing.Point(130, 440);
             this.btnRestartGame.Margin = new System.Windows.Forms.Padding(4);
-            this.btnRestartGame.Name = "btnRestartRound";
+            this.btnRestartGame.Name = "btnRestartGame";
             this.btnRestartGame.Size = new System.Drawing.Size(246, 79);
             this.btnRestartGame.TabIndex = 40;
             this.btnRestartGame.Text = "Restart Game";
@@ -286,7 +286,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(20)))), ((int)(((byte)(200)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(10)))), ((int)(((byte)(190)))));
             this.ClientSize = new System.Drawing.Size(893, 571);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnClose);

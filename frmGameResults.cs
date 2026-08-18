@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection.Emit;
 using System.Windows.Forms;
 
 namespace _3.Tic_Tac_Toe_Game
@@ -60,6 +61,7 @@ namespace _3.Tic_Tac_Toe_Game
         private void frmGameResults_Load(object sender, EventArgs e)
         {
             lblRoundNumber.Text = _howManyRounds.ToString();
+            if (_howManyRounds == 1) label1.Text = "Round.";
             lblP1Wins.Text = _player1WinTimes.ToString();
             lblP2Wins.Text = _player2WinTimes.ToString();
             lblDrawTimes.Text = _drawTimes.ToString();
