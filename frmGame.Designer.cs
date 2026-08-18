@@ -129,7 +129,7 @@
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Font = new System.Drawing.Font("Showcard Gothic", 20F, System.Drawing.FontStyle.Bold);
             this.lblTitle.ForeColor = System.Drawing.Color.Snow;
-            this.lblTitle.Location = new System.Drawing.Point(307, 24);
+            this.lblTitle.Location = new System.Drawing.Point(317, 24);
             this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(273, 33);
@@ -212,6 +212,7 @@
             this.groupBox2.Controls.Add(this.lblGDplayer2);
             this.groupBox2.Controls.Add(this.lblP1Wins);
             this.groupBox2.Controls.Add(this.lblP2Wins);
+            this.groupBox2.Font = new System.Drawing.Font("Papyrus", 10.2F, System.Drawing.FontStyle.Bold);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBox2.Location = new System.Drawing.Point(574, 512);
             this.groupBox2.Name = "groupBox2";
@@ -499,6 +500,7 @@
             // 
             // btnBackToDefault
             // 
+            this.btnBackToDefault.Font = new System.Drawing.Font("Papyrus", 10.2F);
             this.btnBackToDefault.Image = global::_3.Tic_Tac_Toe_Game.Properties.Resources.Scroll;
             this.btnBackToDefault.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnBackToDefault.Location = new System.Drawing.Point(229, 548);
@@ -512,6 +514,7 @@
             // 
             // btnChangeColorMode
             // 
+            this.btnChangeColorMode.Font = new System.Drawing.Font("Papyrus", 10.2F);
             this.btnChangeColorMode.Image = global::_3.Tic_Tac_Toe_Game.Properties.Resources.Briefcase;
             this.btnChangeColorMode.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnChangeColorMode.Location = new System.Drawing.Point(102, 548);
@@ -525,7 +528,7 @@
             // 
             // btnRestartRound
             // 
-            this.btnRestartRound.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnRestartRound.Font = new System.Drawing.Font("Papyrus", 18F, System.Drawing.FontStyle.Bold);
             this.btnRestartRound.Image = global::_3.Tic_Tac_Toe_Game.Properties.Resources.Restart;
             this.btnRestartRound.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnRestartRound.Location = new System.Drawing.Point(102, 429);
@@ -545,11 +548,12 @@
             this.chkAutoRestart.FlatAppearance.BorderSize = 2;
             this.chkAutoRestart.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.chkAutoRestart.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.chkAutoRestart.Font = new System.Drawing.Font("Papyrus", 10.2F, System.Drawing.FontStyle.Bold);
             this.chkAutoRestart.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.chkAutoRestart.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.chkAutoRestart.Location = new System.Drawing.Point(163, 515);
             this.chkAutoRestart.Name = "chkAutoRestart";
-            this.chkAutoRestart.Size = new System.Drawing.Size(106, 21);
+            this.chkAutoRestart.Size = new System.Drawing.Size(127, 26);
             this.chkAutoRestart.TabIndex = 53;
             this.chkAutoRestart.Text = "Auto Restart";
             this.chkAutoRestart.UseVisualStyleBackColor = true;

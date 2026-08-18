@@ -49,7 +49,7 @@
             // 
             // btnStartGame
             // 
-            this.btnStartGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.btnStartGame.Font = new System.Drawing.Font("Papyrus", 20F, System.Drawing.FontStyle.Bold);
             this.btnStartGame.Location = new System.Drawing.Point(301, 449);
             this.btnStartGame.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnStartGame.Name = "btnStartGame";
@@ -67,7 +67,7 @@
             this.lblPlayer2Title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(202)))), ((int)(((byte)(228)))));
             this.lblPlayer2Title.Location = new System.Drawing.Point(237, 22);
             this.lblPlayer2Title.Name = "lblPlayer2Title";
-            this.lblPlayer2Title.Size = new System.Drawing.Size(164, 42);
+            this.lblPlayer2Title.Size = new System.Drawing.Size(135, 33);
             this.lblPlayer2Title.TabIndex = 46;
             this.lblPlayer2Title.Text = "Player2";
             // 
@@ -79,7 +79,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(228)))), ((int)(((byte)(46)))));
             this.label2.Location = new System.Drawing.Point(471, 22);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(211, 42);
+            this.label2.Size = new System.Drawing.Size(173, 33);
             this.label2.TabIndex = 45;
             this.label2.Text = "How Many";
             // 
@@ -91,7 +91,7 @@
             this.lblTurnPlayer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(202)))), ((int)(((byte)(228)))));
             this.lblTurnPlayer.Location = new System.Drawing.Point(7, 22);
             this.lblTurnPlayer.Name = "lblTurnPlayer";
-            this.lblTurnPlayer.Size = new System.Drawing.Size(163, 42);
+            this.lblTurnPlayer.Size = new System.Drawing.Size(134, 33);
             this.lblTurnPlayer.TabIndex = 44;
             this.lblTurnPlayer.Text = "Player1";
             // 
@@ -103,13 +103,13 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(228)))), ((int)(((byte)(46)))));
             this.label1.Location = new System.Drawing.Point(52, 176);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(211, 42);
+            this.label1.Size = new System.Drawing.Size(173, 33);
             this.label1.TabIndex = 43;
             this.label1.Text = "Play With";
             // 
             // txtPlayer1Name
             // 
-            this.txtPlayer1Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
+            this.txtPlayer1Name.Font = new System.Drawing.Font("Papyrus", 12.8F);
             this.txtPlayer1Name.Location = new System.Drawing.Point(14, 86);
             this.txtPlayer1Name.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPlayer1Name.MaxLength = 25;
@@ -125,12 +125,12 @@
             // 
             this.rbComputer.AutoSize = true;
             this.rbComputer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rbComputer.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.8F);
+            this.rbComputer.Font = new System.Drawing.Font("Papyrus", 17.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(5)));
             this.rbComputer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.rbComputer.Location = new System.Drawing.Point(539, 182);
             this.rbComputer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbComputer.Name = "rbComputer";
-            this.rbComputer.Size = new System.Drawing.Size(164, 40);
+            this.rbComputer.Size = new System.Drawing.Size(143, 33);
             this.rbComputer.TabIndex = 2;
             this.rbComputer.Text = "Computer";
             this.rbComputer.UseVisualStyleBackColor = true;
@@ -138,7 +138,7 @@
             // 
             // txtPlayer2Name
             // 
-            this.txtPlayer2Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
+            this.txtPlayer2Name.Font = new System.Drawing.Font("Papyrus", 12.8F);
             this.txtPlayer2Name.Location = new System.Drawing.Point(244, 86);
             this.txtPlayer2Name.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPlayer2Name.MaxLength = 25;
@@ -154,12 +154,12 @@
             // 
             this.rbFriend.AutoSize = true;
             this.rbFriend.Checked = true;
-            this.rbFriend.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.8F);
+            this.rbFriend.Font = new System.Drawing.Font("Papyrus", 17.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(5)));
             this.rbFriend.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.rbFriend.Location = new System.Drawing.Point(340, 181);
             this.rbFriend.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbFriend.Name = "rbFriend";
-            this.rbFriend.Size = new System.Drawing.Size(121, 40);
+            this.rbFriend.Size = new System.Drawing.Size(105, 33);
             this.rbFriend.TabIndex = 1;
             this.rbFriend.TabStop = true;
             this.rbFriend.Text = "Friend";
@@ -174,6 +174,7 @@
             this.gbDetails.Controls.Add(this.txtPlayer1Name);
             this.gbDetails.Controls.Add(this.txtPlayer2Name);
             this.gbDetails.Controls.Add(this.label2);
+            this.gbDetails.Font = new System.Drawing.Font("Papyrus", 9.8F, System.Drawing.FontStyle.Bold);
             this.gbDetails.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.gbDetails.Location = new System.Drawing.Point(60, 240);
             this.gbDetails.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -187,10 +188,10 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F);
+            this.checkBox1.Font = new System.Drawing.Font("Papyrus", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(5)));
             this.checkBox1.Location = new System.Drawing.Point(563, 80);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(119, 42);
+            this.checkBox1.Size = new System.Drawing.Size(103, 36);
             this.checkBox1.TabIndex = 6;
             this.checkBox1.Text = "Open";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -207,7 +208,7 @@
             0,
             -2147483648});
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(64, 43);
+            this.numericUpDown1.Size = new System.Drawing.Size(64, 36);
             this.numericUpDown1.TabIndex = 5;
             this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.numericUpDown1.Value = new decimal(new int[] {
@@ -224,7 +225,7 @@
             this.lblTitle.ForeColor = System.Drawing.Color.Snow;
             this.lblTitle.Location = new System.Drawing.Point(247, 65);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(332, 42);
+            this.lblTitle.Size = new System.Drawing.Size(273, 33);
             this.lblTitle.TabIndex = 54;
             this.lblTitle.Text = "Tic-Tac-Toe Game";
             // 
@@ -259,7 +260,7 @@
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(20)))), ((int)(((byte)(200)))));
             this.ClientSize = new System.Drawing.Size(829, 580);
@@ -271,7 +272,7 @@
             this.Controls.Add(this.rbFriend);
             this.Controls.Add(this.btnStartGame);
             this.Controls.Add(this.label1);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.8F);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.8F, System.Drawing.FontStyle.Underline);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmMain";
