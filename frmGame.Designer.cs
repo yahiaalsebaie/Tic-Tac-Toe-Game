@@ -92,6 +92,7 @@
             this.lblTurnPlayer.TabIndex = 1;
             this.lblTurnPlayer.Tag = "Player1";
             this.lblTurnPlayer.Text = "Player1";
+            this.lblTurnPlayer.SizeChanged += new System.EventHandler(this.lblTurnPlayer_SizeChanged);
             this.lblTurnPlayer.Click += new System.EventHandler(this.lblTurnPlayer_Click);
             // 
             // label2
@@ -120,6 +121,7 @@
             this.lblWinner.TabIndex = 3;
             this.lblWinner.Tag = "IN PROGRESS";
             this.lblWinner.Text = "IN PROGRESS";
+            this.lblWinner.SizeChanged += new System.EventHandler(this.lblWinner_SizeChanged);
             // 
             // lblTitle
             // 
@@ -230,6 +232,7 @@
             this.lblRoundNumber.Size = new System.Drawing.Size(73, 42);
             this.lblRoundNumber.TabIndex = 0;
             this.lblRoundNumber.Text = "0/0";
+            this.lblRoundNumber.SizeChanged += new System.EventHandler(this.lblRoundNumber_SizeChanged);
             // 
             // btn9
             // 

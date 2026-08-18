@@ -39,7 +39,7 @@ namespace _3.Tic_Tac_Toe_Game
             _howManyRounds = howManyRounds;
             _frmMain = frmMain;
             
-            CenterObjOverObj(lblTurnPlayer, btnRestartRound);
+       //     CenterObjOverObj(lblTurnPlayer, btnRestartRound);
         }
 
         public enum enPlayer
@@ -188,7 +188,7 @@ namespace _3.Tic_Tac_Toe_Game
                     break;
             }
             //  CenterLabelOverButton(lblWinner, btnRestartRound); 
-            CenterObjOverObj(lblWinner, btnRestartRound);
+         //   CenterObjOverObj(lblWinner, btnRestartRound);
 
         }
 
@@ -242,7 +242,7 @@ namespace _3.Tic_Tac_Toe_Game
             if (_howManyRounds == -1)
             {
                 lblRoundNumber.Text = "Infinite Rounds";
-                CenterLabelOverButton(lblRoundNumber, btnRestartRound);
+             //   CenterLabelOverButton(lblRoundNumber, btnRestartRound);
                 return;
             }
 
@@ -270,7 +270,7 @@ namespace _3.Tic_Tac_Toe_Game
 
             lblTurnPlayer.Text = _player1Name.Trim();
             lblWinner.Text = "IN PROGRESS";
-            CenterObjOverObj(lblWinner, btnRestartRound);
+           // CenterObjOverObj(lblWinner, btnRestartRound);
             foreach (Button btn in gbCards.Controls.OfType<Button>().Where(B => B.Tag != null))
             {
                 btn.Text = "?";
@@ -322,12 +322,7 @@ namespace _3.Tic_Tac_Toe_Game
             lblWinner.ForeColor = lblTurnPlayer.ForeColor;
         }
 
-        private void CenterLabelOverButton(Label label, Button button)
-        {
-            label.AutoSize = true;
-
-            label.Left = button.Left + (button.Width - label.Width) / 2;
-        }
+      
         private void CenterObjOverObj(Control obj1, Control obj2)
         {
             obj1.AutoSize = true;
@@ -346,7 +341,7 @@ namespace _3.Tic_Tac_Toe_Game
             if (_howManyRounds == -1)
             {
                 lblRoundNumber.Text = "Infinite Rounds";
-                CenterLabelOverButton(lblRoundNumber, btnRestartRound); 
+                //CenterLabelOverButton(lblRoundNumber, btnRestartRound); 
             }
             else
                 UpdateRoundNumber();
@@ -386,6 +381,22 @@ namespace _3.Tic_Tac_Toe_Game
 
         private void chkAutoRestart_CheckedChanged(object sender, EventArgs e)
         {
+        }
+
+        private void lblTurnPlayer_SizeChanged(object sender, EventArgs e)
+        {
+            CenterObjOverObj(lblTurnPlayer, btnRestartRound);
+        }
+
+        private void lblRoundNumber_SizeChanged(object sender, EventArgs e)
+        {
+            CenterObjOverObj(lblRoundNumber, btnRestartRound);
+        }
+
+        private void lblWinner_SizeChanged(object sender, EventArgs e)
+        {
+            CenterObjOverObj(lblWinner, btnRestartRound);
+
         }
     }
 }
