@@ -32,12 +32,14 @@ namespace _3.Tic_Tac_Toe_Game
         public frmTicTacToeGame(string player1 = "Player1",
             string player2 = "Player2", sbyte howManyRounds = -1, frmMain frmMain = null)
         {
+            InitializeComponent();
+            
             _player1Name = player1;
             _player2Name = player2;
             _howManyRounds = howManyRounds;
             _frmMain = frmMain;
-
-            InitializeComponent();
+            
+            CenterObjOverObj(lblTurnPlayer, btnRestartRound);
         }
 
         public enum enPlayer
@@ -112,7 +114,7 @@ namespace _3.Tic_Tac_Toe_Game
                 GameStatus.GameOver = true;
                 GameStatus.Winner = enWinner.Draw;
 
-                _drawTimes++;
+                //_drawTimes++;
 
                 lblWinner.Text = "Draw";
 
@@ -121,7 +123,7 @@ namespace _3.Tic_Tac_Toe_Game
                 "Game Over",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Asterisk);
-
+                UpdateWinnerScore();
                 EndRound();
             }
         }
@@ -185,6 +187,9 @@ namespace _3.Tic_Tac_Toe_Game
                     lblDrawTimes.Text = _drawTimes.ToString();
                     break;
             }
+            //  CenterLabelOverButton(lblWinner, btnRestartRound); 
+            CenterObjOverObj(lblWinner, btnRestartRound);
+
         }
 
 
@@ -193,7 +198,9 @@ namespace _3.Tic_Tac_Toe_Game
             _roundNumber++;
             if (chkAutoRestart.Checked) { RestartRound(); }
 
-            if (_roundNumber == _howManyRounds)
+            if (_howManyRounds == -1) return;
+
+                if (_roundNumber == _howManyRounds)
             {
                 lblFinalRound.Visible = true;
                 return;
@@ -225,14 +232,22 @@ namespace _3.Tic_Tac_Toe_Game
         public void DefaultValues()
         {
             RestartRound();
-            _roundNumber = 1;
-            UpdateRoundNumber();
             _player1WinTimes = 0;
             _player2WinTimes = 0;
             _drawTimes = 0;
             lblDrawTimes.Text = "0";
             lblP1Wins.Text = "0";
             lblP2Wins.Text = "0";
+            
+            if (_howManyRounds == -1)
+            {
+                lblRoundNumber.Text = "Infinite Rounds";
+                CenterLabelOverButton(lblRoundNumber, btnRestartRound);
+                return;
+            }
+
+            _roundNumber = 1;
+            UpdateRoundNumber();
             //frmTicTacToeGame_Load(null, null);
         }
         private void RestartRound()
@@ -255,7 +270,7 @@ namespace _3.Tic_Tac_Toe_Game
 
             lblTurnPlayer.Text = _player1Name.Trim();
             lblWinner.Text = "IN PROGRESS";
-
+            CenterObjOverObj(lblWinner, btnRestartRound);
             foreach (Button btn in gbCards.Controls.OfType<Button>().Where(B => B.Tag != null))
             {
                 btn.Text = "?";
@@ -307,17 +322,34 @@ namespace _3.Tic_Tac_Toe_Game
             lblWinner.ForeColor = lblTurnPlayer.ForeColor;
         }
 
+        private void CenterLabelOverButton(Label label, Button button)
+        {
+            label.AutoSize = true;
 
+            label.Left = button.Left + (button.Width - label.Width) / 2;
+        }
+        private void CenterObjOverObj(Control obj1, Control obj2)
+        {
+            obj1.AutoSize = true;
+
+            obj1.Left = obj2.Left + (obj2.Width - obj1.Width) / 2;
+        }
         private void frmTicTacToeGame_Load(object sender, EventArgs e)
         {
+
             GameStatus.Winner = enWinner.GameInProgress;
 
             GameStatus.GameOver = false;
             GameStatus.PlayCount = 0;
 
-            UpdateRoundNumber();
-
             lblTurnPlayer.Text = _player1Name.Trim();
+            if (_howManyRounds == -1)
+            {
+                lblRoundNumber.Text = "Infinite Rounds";
+                CenterLabelOverButton(lblRoundNumber, btnRestartRound); 
+            }
+            else
+                UpdateRoundNumber();
         }
 
         private void btnClose_Click(object sender, EventArgs e)

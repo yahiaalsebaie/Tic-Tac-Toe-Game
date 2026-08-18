@@ -31,11 +31,7 @@ namespace _3.Tic_Tac_Toe_Game
             InitializeComponent();
         }
 
-        private void lblRoundNumber_Click(object sender, EventArgs e)
-        {
-
-        }
-
+      
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();

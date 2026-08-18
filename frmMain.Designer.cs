@@ -184,12 +184,12 @@
             this.gbDetails.TabStop = false;
             this.gbDetails.Text = "Details..";
             // 
-            // chkAutoRestart
+            // checkBox1
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F);
             this.checkBox1.Location = new System.Drawing.Point(563, 80);
-            this.checkBox1.Name = "chkAutoRestart";
+            this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(119, 42);
             this.checkBox1.TabIndex = 6;
             this.checkBox1.Text = "Open";
@@ -201,6 +201,11 @@
             this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F);
             this.numericUpDown1.Location = new System.Drawing.Point(479, 80);
             this.numericUpDown1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(64, 43);
             this.numericUpDown1.TabIndex = 5;
@@ -272,7 +277,6 @@
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMain";
-            this.Load += new System.EventHandler(this.frmMain_Load);
             this.gbDetails.ResumeLayout(false);
             this.gbDetails.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();

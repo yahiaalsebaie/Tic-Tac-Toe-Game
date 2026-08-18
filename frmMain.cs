@@ -10,11 +10,7 @@ namespace _3.Tic_Tac_Toe_Game
             InitializeComponent();
         }
 
-        private void frmMain_Load(object sender, EventArgs e)
-        {
-
-        }
-
+      
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox1.Checked)

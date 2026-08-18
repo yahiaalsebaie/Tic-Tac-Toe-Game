@@ -60,7 +60,7 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.btnBackToDefault = new System.Windows.Forms.Button();
             this.btnChangeColorMode = new System.Windows.Forms.Button();
-            this.btnRestartGame = new System.Windows.Forms.Button();
+            this.btnRestartRound = new System.Windows.Forms.Button();
             this.chkAutoRestart = new System.Windows.Forms.CheckBox();
             this.groupBox2.SuspendLayout();
             this.gbCards.SuspendLayout();
@@ -503,23 +503,25 @@
             this.btnChangeColorMode.UseVisualStyleBackColor = true;
             this.btnChangeColorMode.Click += new System.EventHandler(this.btnChangeColorMode_Click);
             // 
-            // btnRestartGame
+            // btnRestartRound
             // 
-            this.btnRestartGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnRestartGame.Image = global::_3.Tic_Tac_Toe_Game.Properties.Resources.Restart;
-            this.btnRestartGame.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRestartGame.Location = new System.Drawing.Point(102, 429);
-            this.btnRestartGame.Margin = new System.Windows.Forms.Padding(4);
-            this.btnRestartGame.Name = "btnRestartGame";
-            this.btnRestartGame.Size = new System.Drawing.Size(246, 79);
-            this.btnRestartGame.TabIndex = 4;
-            this.btnRestartGame.Text = "Restart Round";
-            this.btnRestartGame.UseVisualStyleBackColor = true;
-            this.btnRestartGame.Click += new System.EventHandler(this.btnRestartRound_Click);
+            this.btnRestartRound.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnRestartRound.Image = global::_3.Tic_Tac_Toe_Game.Properties.Resources.Restart;
+            this.btnRestartRound.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRestartRound.Location = new System.Drawing.Point(102, 429);
+            this.btnRestartRound.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRestartRound.Name = "btnRestartRound";
+            this.btnRestartRound.Size = new System.Drawing.Size(246, 79);
+            this.btnRestartRound.TabIndex = 4;
+            this.btnRestartRound.Text = "Restart Round";
+            this.btnRestartRound.UseVisualStyleBackColor = true;
+            this.btnRestartRound.Click += new System.EventHandler(this.btnRestartRound_Click);
             // 
             // chkAutoRestart
             // 
             this.chkAutoRestart.AutoSize = true;
+            this.chkAutoRestart.Checked = true;
+            this.chkAutoRestart.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkAutoRestart.FlatAppearance.BorderSize = 2;
             this.chkAutoRestart.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.chkAutoRestart.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -551,7 +553,7 @@
             this.Controls.Add(this.btnBackToDefault);
             this.Controls.Add(this.btnChangeColorMode);
             this.Controls.Add(this.lblTitle);
-            this.Controls.Add(this.btnRestartGame);
+            this.Controls.Add(this.btnRestartRound);
             this.Controls.Add(this.lblWinner);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblTurnPlayer);
@@ -580,7 +582,7 @@
         private System.Windows.Forms.Label lblTurnPlayer;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblWinner;
-        private System.Windows.Forms.Button btnRestartGame;
+        private System.Windows.Forms.Button btnRestartRound;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Button btnBackToDefault;
         private System.Windows.Forms.Button btnChangeColorMode;

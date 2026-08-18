@@ -76,12 +76,12 @@
             this.lblTitle.TabIndex = 41;
             this.lblTitle.Text = "Tic-Tac-Toe Game";
             // 
-            // btnRestartGame
+            // btnRestartRound
             // 
             this.btnRestartGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnRestartGame.Location = new System.Drawing.Point(130, 440);
             this.btnRestartGame.Margin = new System.Windows.Forms.Padding(4);
-            this.btnRestartGame.Name = "btnRestartGame";
+            this.btnRestartGame.Name = "btnRestartRound";
             this.btnRestartGame.Size = new System.Drawing.Size(246, 79);
             this.btnRestartGame.TabIndex = 40;
             this.btnRestartGame.Text = "Restart Game";
@@ -127,7 +127,6 @@
             this.lblRoundNumber.Size = new System.Drawing.Size(38, 42);
             this.lblRoundNumber.TabIndex = 35;
             this.lblRoundNumber.Text = "0";
-            this.lblRoundNumber.Click += new System.EventHandler(this.lblRoundNumber_Click);
             // 
             // label1
             // 
