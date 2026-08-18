@@ -95,7 +95,7 @@
             this.lblTurnPlayer.Tag = "Player1";
             this.lblTurnPlayer.Text = "Player1";
             this.lblTurnPlayer.SizeChanged += new System.EventHandler(this.lblTurnPlayer_SizeChanged);
-            this.lblTurnPlayer.Click += new System.EventHandler(this.lblTurnPlayer_Click);
+          //  this.lblTurnPlayer.Click += new System.EventHandler(this.lblTurnPlayer_Click);
             // 
             // label2
             // 

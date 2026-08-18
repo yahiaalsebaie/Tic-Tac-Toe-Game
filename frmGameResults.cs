@@ -105,6 +105,17 @@ namespace _3.Tic_Tac_Toe_Game
 
         private void frmGameResults_MouseEnter(object sender, EventArgs e)
         {
+            ((Control)sender).Cursor = _pointerCursor;
+        }
+
+       /* private void frmGameResults_MouseLeave(object sender, EventArgs e)
+        {
+            ((Control)sender).Cursor = _pointerCursor;
+
+        }*/
+
+        private void btnMain_MouseEnter(object sender, EventArgs e)
+        {
             ((Control)sender).Cursor = _handCursor;
         }
     }

@@ -31,13 +31,15 @@ namespace _3.Tic_Tac_Toe_Game
 
         private Cursor _pointerCursor;
         private Cursor _handCursor;
+
+        private bool _isComputerPlayer = false;
+
         public frmTicTacToeGame()
         {
             InitializeComponent();
         }
 
-        public frmTicTacToeGame(string player1 = "Player1",
-            string player2 = "Player2", sbyte howManyRounds = -1, frmMain frmMain = null)
+        public frmTicTacToeGame(string player1 = "Player1",string player2 = "Player2", sbyte howManyRounds = -1,bool isComputerPlayer = false, frmMain frmMain = null)
         {
             InitializeComponent();
 
@@ -45,7 +47,7 @@ namespace _3.Tic_Tac_Toe_Game
             _player2Name = player2;
             _howManyRounds = howManyRounds;
             _frmMain = frmMain;
-
+            _isComputerPlayer = isComputerPlayer;
             //     CenterObjOverObj(lblTurnPlayer, btnRestartRound);
         }
 
@@ -113,7 +115,7 @@ namespace _3.Tic_Tac_Toe_Game
             if (CheckValues(btn1, btn5, btn9)) return;
             if (CheckValues(btn3, btn5, btn7)) return;
 
-            if (_howManyRounds == -1) ComputerPlay();
+            if (_isComputerPlayer) ComputerPlay(); //AI mode
 
             // Draw
             if (GameStatus.PlayCount == 9)

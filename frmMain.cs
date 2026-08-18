@@ -12,6 +12,7 @@ namespace _3.Tic_Tac_Toe_Game
         private Cursor _pointerCursor;
         private Cursor _handCursor;
         private Cursor _textCursor;
+        private bool _isComputerPlayer = false;
         public frmMain()
         {
             InitializeComponent();
@@ -41,7 +42,7 @@ namespace _3.Tic_Tac_Toe_Game
                 numericUpDown1.Value = 1;
                 return;
             }
-            frmTicTacToeGame frmTicTacToeGame = new frmTicTacToeGame(txtPlayer1Name.Text.Trim(), txtPlayer2Name.Text.Trim(), (sbyte)numericUpDown1.Value, this);
+            frmTicTacToeGame frmTicTacToeGame = new frmTicTacToeGame(txtPlayer1Name.Text.Trim(), txtPlayer2Name.Text.Trim(), (sbyte)numericUpDown1.Value, _isComputerPlayer, this);
             this.Hide();
             frmTicTacToeGame.ShowDialog();
         }
@@ -54,11 +55,14 @@ namespace _3.Tic_Tac_Toe_Game
                 lblPlayer2Title.Visible = false;
                 txtPlayer2Name.Visible = false;
                 txtPlayer2Name.Text = "Computer";
+                _isComputerPlayer = true;   
             }
             else
             {
                 lblPlayer2Title.Visible = true;
                 txtPlayer2Name.Visible = true;
+                _isComputerPlayer = false;
+
                 txtPlayer2Name.Text = _player2PrevName;
 
             }
