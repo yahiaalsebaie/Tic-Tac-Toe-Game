@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -33,20 +34,20 @@ namespace _3.Tic_Tac_Toe_Game
             string player2 = "Player2", sbyte howManyRounds = -1, frmMain frmMain = null)
         {
             InitializeComponent();
-            
+
             _player1Name = player1;
             _player2Name = player2;
             _howManyRounds = howManyRounds;
             _frmMain = frmMain;
-            
-       //     CenterObjOverObj(lblTurnPlayer, btnRestartRound);
+
+            //     CenterObjOverObj(lblTurnPlayer, btnRestartRound);
         }
 
         public enum enPlayer
         {
             Player1, Player2
         }
-
+        
         public enum enWinner
         {
             Player1, Player2, Draw, GameInProgress
@@ -118,11 +119,8 @@ namespace _3.Tic_Tac_Toe_Game
 
                 lblWinner.Text = "Draw";
 
-                MessageBox.Show(
-                "It's Draw!",
-                "Game Over",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Asterisk);
+                MessageBox.Show( "It's Draw!","Game Over",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
+
                 UpdateWinnerScore();
                 EndRound();
             }
@@ -165,6 +163,7 @@ namespace _3.Tic_Tac_Toe_Game
             GameStatus.PlayCount++;
 
             CheckWinner();
+
         }
 
 
@@ -188,7 +187,7 @@ namespace _3.Tic_Tac_Toe_Game
                     break;
             }
             //  CenterLabelOverButton(lblWinner, btnRestartRound); 
-         //   CenterObjOverObj(lblWinner, btnRestartRound);
+            //   CenterObjOverObj(lblWinner, btnRestartRound);
 
         }
 
@@ -200,7 +199,7 @@ namespace _3.Tic_Tac_Toe_Game
 
             if (_howManyRounds == -1) return;
 
-                if (_roundNumber == _howManyRounds)
+            if (_roundNumber == _howManyRounds)
             {
                 lblFinalRound.Visible = true;
                 return;
@@ -238,11 +237,11 @@ namespace _3.Tic_Tac_Toe_Game
             lblDrawTimes.Text = "0";
             lblP1Wins.Text = "0";
             lblP2Wins.Text = "0";
-            
+
             if (_howManyRounds == -1)
             {
                 lblRoundNumber.Text = "Infinite Rounds";
-             //   CenterLabelOverButton(lblRoundNumber, btnRestartRound);
+                //   CenterLabelOverButton(lblRoundNumber, btnRestartRound);
                 return;
             }
 
@@ -270,7 +269,7 @@ namespace _3.Tic_Tac_Toe_Game
 
             lblTurnPlayer.Text = _player1Name.Trim();
             lblWinner.Text = "IN PROGRESS";
-           // CenterObjOverObj(lblWinner, btnRestartRound);
+            // CenterObjOverObj(lblWinner, btnRestartRound);
             foreach (Button btn in gbCards.Controls.OfType<Button>().Where(B => B.Tag != null))
             {
                 btn.Text = "?";
@@ -322,7 +321,7 @@ namespace _3.Tic_Tac_Toe_Game
             lblWinner.ForeColor = lblTurnPlayer.ForeColor;
         }
 
-      
+
         private void CenterObjOverObj(Control obj1, Control obj2)
         {
             obj1.AutoSize = true;
@@ -396,6 +395,19 @@ namespace _3.Tic_Tac_Toe_Game
         private void lblWinner_SizeChanged(object sender, EventArgs e)
         {
             CenterObjOverObj(lblWinner, btnRestartRound);
+
+        }
+        private void ComputerPlay()
+        {
+            List<Button> availableButtons = gbCards.Controls.OfType<Button>().Where(B => B.Tag?.ToString() == "?").ToList();
+            if (availableButtons.Count == 0) { return; }
+            Random random = new Random();
+
+            int randomIndex = random.Next(0, availableButtons.Count);
+
+            Button selectedButton = availableButtons[randomIndex];
+
+            ChangeXorO(selectedButton);
 
         }
     }
