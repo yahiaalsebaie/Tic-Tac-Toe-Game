@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.IO;
 using System.Reflection.Emit;
 using System.Windows.Forms;
@@ -71,7 +72,7 @@ namespace _3.Tic_Tac_Toe_Game
             _handCursor = new Cursor(Path.Combine(cursorFolder, "Hand-Cursor (32).cur"));
 
             this.Cursor = _pointerCursor;
-
+          
             lblRoundNumber.Text = _howManyRounds.ToString();
             if (_howManyRounds == 1) label1.Text = "Round.";
             lblP1Wins.Text = _player1WinTimes.ToString();

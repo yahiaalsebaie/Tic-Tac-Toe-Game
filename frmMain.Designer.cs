@@ -42,18 +42,27 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pbEasy = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.pbMedium = new System.Windows.Forms.PictureBox();
+            this.pbHard = new System.Windows.Forms.PictureBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.gbDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEasy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMedium)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbHard)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnStartGame
             // 
             this.btnStartGame.Font = new System.Drawing.Font("Papyrus", 20F, System.Drawing.FontStyle.Bold);
-            this.btnStartGame.Location = new System.Drawing.Point(301, 449);
+            this.btnStartGame.Location = new System.Drawing.Point(303, 489);
             this.btnStartGame.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnStartGame.Name = "btnStartGame";
             this.btnStartGame.Size = new System.Drawing.Size(222, 79);
@@ -69,9 +78,9 @@
             this.lblPlayer2Title.BackColor = System.Drawing.Color.Transparent;
             this.lblPlayer2Title.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlayer2Title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(202)))), ((int)(((byte)(228)))));
-            this.lblPlayer2Title.Location = new System.Drawing.Point(237, 22);
+            this.lblPlayer2Title.Location = new System.Drawing.Point(237, 24);
             this.lblPlayer2Title.Name = "lblPlayer2Title";
-            this.lblPlayer2Title.Size = new System.Drawing.Size(135, 33);
+            this.lblPlayer2Title.Size = new System.Drawing.Size(164, 42);
             this.lblPlayer2Title.TabIndex = 46;
             this.lblPlayer2Title.Text = "Player2";
             // 
@@ -81,9 +90,9 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(228)))), ((int)(((byte)(46)))));
-            this.label2.Location = new System.Drawing.Point(471, 22);
+            this.label2.Location = new System.Drawing.Point(471, 24);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(173, 33);
+            this.label2.Size = new System.Drawing.Size(211, 42);
             this.label2.TabIndex = 45;
             this.label2.Text = "How Many";
             // 
@@ -93,9 +102,9 @@
             this.lblTurnPlayer.BackColor = System.Drawing.Color.Transparent;
             this.lblTurnPlayer.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTurnPlayer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(202)))), ((int)(((byte)(228)))));
-            this.lblTurnPlayer.Location = new System.Drawing.Point(7, 22);
+            this.lblTurnPlayer.Location = new System.Drawing.Point(7, 24);
             this.lblTurnPlayer.Name = "lblTurnPlayer";
-            this.lblTurnPlayer.Size = new System.Drawing.Size(134, 33);
+            this.lblTurnPlayer.Size = new System.Drawing.Size(163, 42);
             this.lblTurnPlayer.TabIndex = 44;
             this.lblTurnPlayer.Text = "Player1";
             // 
@@ -107,7 +116,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(228)))), ((int)(((byte)(46)))));
             this.label1.Location = new System.Drawing.Point(52, 176);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(173, 33);
+            this.label1.Size = new System.Drawing.Size(211, 42);
             this.label1.TabIndex = 43;
             this.label1.Text = "Play With";
             // 
@@ -116,7 +125,7 @@
             this.txtPlayer1Name.Font = new System.Drawing.Font("Papyrus", 12.8F);
             this.txtPlayer1Name.Location = new System.Drawing.Point(14, 86);
             this.txtPlayer1Name.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtPlayer1Name.MaxLength = 25;
+            this.txtPlayer1Name.MaxLength = 9;
             this.txtPlayer1Name.Multiline = true;
             this.txtPlayer1Name.Name = "txtPlayer1Name";
             this.txtPlayer1Name.Size = new System.Drawing.Size(157, 31);
@@ -135,7 +144,7 @@
             this.rbComputer.Location = new System.Drawing.Point(539, 182);
             this.rbComputer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbComputer.Name = "rbComputer";
-            this.rbComputer.Size = new System.Drawing.Size(143, 33);
+            this.rbComputer.Size = new System.Drawing.Size(176, 39);
             this.rbComputer.TabIndex = 2;
             this.rbComputer.Text = "Computer";
             this.rbComputer.UseVisualStyleBackColor = true;
@@ -147,7 +156,7 @@
             this.txtPlayer2Name.Font = new System.Drawing.Font("Papyrus", 12.8F);
             this.txtPlayer2Name.Location = new System.Drawing.Point(244, 86);
             this.txtPlayer2Name.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtPlayer2Name.MaxLength = 25;
+            this.txtPlayer2Name.MaxLength = 9;
             this.txtPlayer2Name.Multiline = true;
             this.txtPlayer2Name.Name = "txtPlayer2Name";
             this.txtPlayer2Name.Size = new System.Drawing.Size(157, 31);
@@ -166,7 +175,7 @@
             this.rbFriend.Location = new System.Drawing.Point(340, 181);
             this.rbFriend.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbFriend.Name = "rbFriend";
-            this.rbFriend.Size = new System.Drawing.Size(105, 33);
+            this.rbFriend.Size = new System.Drawing.Size(127, 39);
             this.rbFriend.TabIndex = 1;
             this.rbFriend.TabStop = true;
             this.rbFriend.Text = "Friend";
@@ -199,7 +208,7 @@
             this.checkBox1.Font = new System.Drawing.Font("Papyrus", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(5)));
             this.checkBox1.Location = new System.Drawing.Point(563, 80);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(103, 36);
+            this.checkBox1.Size = new System.Drawing.Size(122, 42);
             this.checkBox1.TabIndex = 6;
             this.checkBox1.Text = "Open";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -218,7 +227,7 @@
             0,
             -2147483648});
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(64, 36);
+            this.numericUpDown1.Size = new System.Drawing.Size(64, 43);
             this.numericUpDown1.TabIndex = 5;
             this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.numericUpDown1.Value = new decimal(new int[] {
@@ -235,9 +244,36 @@
             this.lblTitle.ForeColor = System.Drawing.Color.Snow;
             this.lblTitle.Location = new System.Drawing.Point(276, 22);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(273, 33);
+            this.lblTitle.Size = new System.Drawing.Size(332, 42);
             this.lblTitle.TabIndex = 54;
             this.lblTitle.Text = "Tic-Tac-Toe Game";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(228)))), ((int)(((byte)(46)))));
+            this.label3.Location = new System.Drawing.Point(10, 28);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(216, 42);
+            this.label3.TabIndex = 43;
+            this.label3.Text = "Game Level";
+            // 
+            // pbEasy
+            // 
+            this.pbEasy.BackColor = System.Drawing.Color.Transparent;
+            this.pbEasy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pbEasy.Image = global::_3.Tic_Tac_Toe_Game.Properties.Resources.Easy_Level__2_;
+            this.pbEasy.Location = new System.Drawing.Point(208, 27);
+            this.pbEasy.Margin = new System.Windows.Forms.Padding(2);
+            this.pbEasy.Name = "pbEasy";
+            this.pbEasy.Size = new System.Drawing.Size(126, 34);
+            this.pbEasy.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbEasy.TabIndex = 60;
+            this.pbEasy.TabStop = false;
+            this.pbEasy.Tag = "0";
+            this.pbEasy.Click += new System.EventHandler(this.GameLevel_ClickEvent);
             // 
             // pictureBox1
             // 
@@ -280,9 +316,57 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // pbMedium
+            // 
+            this.pbMedium.BackColor = System.Drawing.Color.Transparent;
+            this.pbMedium.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pbMedium.Image = global::_3.Tic_Tac_Toe_Game.Properties.Resources.Medium_Level__2_;
+            this.pbMedium.Location = new System.Drawing.Point(386, 27);
+            this.pbMedium.Margin = new System.Windows.Forms.Padding(2);
+            this.pbMedium.Name = "pbMedium";
+            this.pbMedium.Size = new System.Drawing.Size(126, 34);
+            this.pbMedium.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbMedium.TabIndex = 60;
+            this.pbMedium.TabStop = false;
+            this.pbMedium.Tag = "1";
+            this.pbMedium.Click += new System.EventHandler(this.GameLevel_ClickEvent);
+            // 
+            // pbHard
+            // 
+            this.pbHard.BackColor = System.Drawing.Color.Transparent;
+            this.pbHard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pbHard.Image = global::_3.Tic_Tac_Toe_Game.Properties.Resources.Hard_Level__2_;
+            this.pbHard.Location = new System.Drawing.Point(564, 26);
+            this.pbHard.Margin = new System.Windows.Forms.Padding(2);
+            this.pbHard.Name = "pbHard";
+            this.pbHard.Size = new System.Drawing.Size(126, 34);
+            this.pbHard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbHard.TabIndex = 60;
+            this.pbHard.TabStop = false;
+            this.pbHard.Tag = "2";
+            this.pbHard.Click += new System.EventHandler(this.GameLevel_ClickEvent);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.pbHard);
+            this.groupBox1.Controls.Add(this.pbEasy);
+            this.groupBox1.Controls.Add(this.pbMedium);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Font = new System.Drawing.Font("Papyrus", 9.8F, System.Drawing.FontStyle.Bold);
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.groupBox1.Location = new System.Drawing.Point(58, 399);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Size = new System.Drawing.Size(714, 81);
+            this.groupBox1.TabIndex = 53;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Difficulty";
+            this.groupBox1.Visible = false;
+            // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(20)))), ((int)(((byte)(200)))));
             this.ClientSize = new System.Drawing.Size(829, 580);
@@ -295,6 +379,7 @@
             this.Controls.Add(this.rbFriend);
             this.Controls.Add(this.btnStartGame);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.8F, System.Drawing.FontStyle.Underline);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -306,7 +391,12 @@
             this.gbDetails.ResumeLayout(false);
             this.gbDetails.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEasy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMedium)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbHard)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -329,5 +419,10 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pbEasy;
+        private System.Windows.Forms.PictureBox pbMedium;
+        private System.Windows.Forms.PictureBox pbHard;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -206,6 +206,17 @@
     <Content Include="Cursors\Text-Cursor.cur">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\Medal.png" />
+    <None Include="Resources\Medal1.png" />
+    <None Include="Resources\Easy Level.png" />
+    <None Include="Resources\Hard Level.png" />
+    <None Include="Resources\Medium Level %281%29.png" />
+    <None Include="Resources\Easy Level %281%29.png" />
+    <None Include="Resources\Medium Level.png" />
+    <None Include="Resources\Easy Level1.png" />
+    <None Include="Resources\Easy Level %282%29.png" />
+    <None Include="Resources\Medium Level %282%29.png" />
+    <None Include="Resources\Hard Level %282%29.png" />
     <Content Include="XOGame.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

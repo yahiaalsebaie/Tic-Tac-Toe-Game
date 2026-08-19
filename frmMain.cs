@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 using _3.Tic_Tac_Toe_Game.Properties;
@@ -13,13 +14,25 @@ namespace _3.Tic_Tac_Toe_Game
         private Cursor _handCursor;
         private Cursor _textCursor;
         private bool _isComputerPlayer = false;
+
+        private enum enGameLevel { Easy = 0, Medium = 1, Hard = 2 };
+        private enGameLevel _GameLevel;
+        //picEasy.Tag   = Easy = 0
+        //pbMedium.Tag = Medium = 1
+        //pbHard.Tag   = Hard = 2
+
+        private Size _GameLevelPictureOriginalSize;
+
         public frmMain()
         {
             InitializeComponent();
             _player2PrevName = txtPlayer2Name.Text;
+
+            _GameLevelPictureOriginalSize = pbEasy.Size; // all size is the same
+           // _GameLevelPictureOriginalSize = pbMedium.Size;
+           // _GameLevelPictureOriginalSize = pbHard.Size;
         }
-
-
+       
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox1.Checked)
@@ -55,15 +68,16 @@ namespace _3.Tic_Tac_Toe_Game
                 lblPlayer2Title.Visible = false;
                 txtPlayer2Name.Visible = false;
                 txtPlayer2Name.Text = "Computer";
-                _isComputerPlayer = true;   
+                _isComputerPlayer = true;
+                groupBox1.Visible = true;
             }
             else
             {
                 lblPlayer2Title.Visible = true;
                 txtPlayer2Name.Visible = true;
                 _isComputerPlayer = false;
-
                 txtPlayer2Name.Text = _player2PrevName;
+                groupBox1.Visible = false;
 
             }
         }
@@ -107,6 +121,23 @@ namespace _3.Tic_Tac_Toe_Game
         private void txtPlayer2Name_MouseEnter(object sender, EventArgs e)
         {
             ((Control)sender).Cursor = _textCursor;
+        }
+
+        private void ChangeSelectedLevelSize(PictureBox selectedPicture)
+        {
+            /*     foreach (PictureBox pic in this.Controls.OfType<PictureBox>())
+                 {
+                     pic.Size = new Size(pic.Width, pic.Height);
+                     pic.BackColor = Color.Transparent;
+                 }*/
+            selectedPicture.Size = new Size((int)(selectedPicture.Width * 1.10), (int)(selectedPicture.Height * 1.25));
+        }
+        private void GameLevel_ClickEvent(object sender, EventArgs e)
+        {
+            PictureBox selectedPicture = (PictureBox)sender;
+            _GameLevel = (enGameLevel)Convert.ToInt32(selectedPicture.Tag);
+
+            ChangeSelectedLevelSize(selectedPicture);
         }
     }
 }

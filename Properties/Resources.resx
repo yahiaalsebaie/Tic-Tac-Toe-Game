@@ -118,20 +118,38 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Close Window4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Close Window4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="XOGame96" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XOGame96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hard Level" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hard Level.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Medal1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Medal1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="KeypadLock" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\KeypadLock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Easy Level1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Easy Level1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Medium Level" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Medium Level.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Restart" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Restart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Keypad" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Keypad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Easy Level (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Easy Level (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Minimize Window" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Minimize Window.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Medium Level (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Medium Level (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Close Window4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Close Window4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="XOGame" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\XOGame.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,11 +166,17 @@
   <data name="Scroll" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Scroll.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Easy Level" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Easy Level.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Minimize Window1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Minimize Window1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Briefcase" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Briefcase.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Keypad" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Keypad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,7 +184,16 @@
   <data name="BackToSettings" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BackToSettings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="XOGame96" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\XOGame96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Medal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Medal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Easy Level (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Easy Level (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Medium Level (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Medium Level (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hard Level (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hard Level (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

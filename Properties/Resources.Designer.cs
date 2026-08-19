@@ -93,6 +93,66 @@ namespace _3.Tic_Tac_Toe_Game.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Easy_Level {
+            get {
+                object obj = ResourceManager.GetObject("Easy Level", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Easy_Level__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Easy Level (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Easy_Level__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Easy Level (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Easy_Level1 {
+            get {
+                object obj = ResourceManager.GetObject("Easy Level1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Hard_Level {
+            get {
+                object obj = ResourceManager.GetObject("Hard Level", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Hard_Level__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Hard Level (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Keypad {
             get {
                 object obj = ResourceManager.GetObject("Keypad", resourceCulture);
@@ -106,6 +166,56 @@ namespace _3.Tic_Tac_Toe_Game.Properties {
         internal static System.Drawing.Bitmap KeypadLock {
             get {
                 object obj = ResourceManager.GetObject("KeypadLock", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Medal {
+            get {
+                object obj = ResourceManager.GetObject("Medal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Medal1 {
+            get {
+                object obj = ResourceManager.GetObject("Medal1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Medium_Level {
+            get {
+                object obj = ResourceManager.GetObject("Medium Level", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Medium_Level__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Medium Level (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Medium_Level__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Medium Level (2)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
