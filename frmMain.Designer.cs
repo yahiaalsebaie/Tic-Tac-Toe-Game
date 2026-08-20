@@ -49,14 +49,14 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.pbMedium = new System.Windows.Forms.PictureBox();
             this.pbHard = new System.Windows.Forms.PictureBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbGameLevel = new System.Windows.Forms.GroupBox();
             this.gbDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEasy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMedium)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbHard)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.gbGameLevel.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnStartGame
@@ -70,7 +70,6 @@
             this.btnStartGame.Text = "Start Game";
             this.btnStartGame.UseVisualStyleBackColor = true;
             this.btnStartGame.Click += new System.EventHandler(this.btnStartGame_Click);
-            this.btnStartGame.MouseEnter += new System.EventHandler(this.btnStartGame_MouseEnter);
             // 
             // lblPlayer2Title
             // 
@@ -149,7 +148,8 @@
             this.rbComputer.Text = "Computer";
             this.rbComputer.UseVisualStyleBackColor = true;
             this.rbComputer.CheckedChanged += new System.EventHandler(this.rbComputer_CheckedChanged);
-            this.rbComputer.MouseEnter += new System.EventHandler(this.btnStartGame_MouseEnter);
+            this.rbComputer.MouseEnter += new System.EventHandler(this.ctrl_MouseEnter);
+            this.rbComputer.MouseLeave += new System.EventHandler(this.ctrl_MouseLeave);
             // 
             // txtPlayer2Name
             // 
@@ -180,7 +180,8 @@
             this.rbFriend.TabStop = true;
             this.rbFriend.Text = "Friend";
             this.rbFriend.UseVisualStyleBackColor = true;
-            this.rbFriend.MouseEnter += new System.EventHandler(this.btnStartGame_MouseEnter);
+            this.rbFriend.MouseEnter += new System.EventHandler(this.ctrl_MouseEnter);
+            this.rbFriend.MouseLeave += new System.EventHandler(this.ctrl_MouseLeave);
             // 
             // gbDetails
             // 
@@ -213,7 +214,6 @@
             this.checkBox1.Text = "Open";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            this.checkBox1.MouseEnter += new System.EventHandler(this.btnStartGame_MouseEnter);
             // 
             // numericUpDown1
             // 
@@ -274,6 +274,8 @@
             this.pbEasy.TabStop = false;
             this.pbEasy.Tag = "0";
             this.pbEasy.Click += new System.EventHandler(this.GameLevel_ClickEvent);
+            this.pbEasy.MouseEnter += new System.EventHandler(this.ctrl_MouseEnter);
+            this.pbEasy.MouseLeave += new System.EventHandler(this.ctrl_MouseLeave);
             // 
             // pictureBox1
             // 
@@ -284,6 +286,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(96, 96);
             this.pictureBox1.TabIndex = 57;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseEnter += new System.EventHandler(this.ctrl_MouseEnter);
             this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
             this.pictureBox1.MouseHover += new System.EventHandler(this.pictureBox1_MouseHover);
             // 
@@ -330,6 +333,8 @@
             this.pbMedium.TabStop = false;
             this.pbMedium.Tag = "1";
             this.pbMedium.Click += new System.EventHandler(this.GameLevel_ClickEvent);
+            this.pbMedium.MouseEnter += new System.EventHandler(this.ctrl_MouseEnter);
+            this.pbMedium.MouseLeave += new System.EventHandler(this.ctrl_MouseLeave);
             // 
             // pbHard
             // 
@@ -345,24 +350,26 @@
             this.pbHard.TabStop = false;
             this.pbHard.Tag = "2";
             this.pbHard.Click += new System.EventHandler(this.GameLevel_ClickEvent);
+            this.pbHard.MouseEnter += new System.EventHandler(this.ctrl_MouseEnter);
+            this.pbHard.MouseLeave += new System.EventHandler(this.ctrl_MouseLeave);
             // 
-            // groupBox1
+            // gbGameLevel
             // 
-            this.groupBox1.Controls.Add(this.pbHard);
-            this.groupBox1.Controls.Add(this.pbEasy);
-            this.groupBox1.Controls.Add(this.pbMedium);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Font = new System.Drawing.Font("Papyrus", 9.8F, System.Drawing.FontStyle.Bold);
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.groupBox1.Location = new System.Drawing.Point(58, 399);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(714, 81);
-            this.groupBox1.TabIndex = 53;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Difficulty";
-            this.groupBox1.Visible = false;
+            this.gbGameLevel.Controls.Add(this.pbHard);
+            this.gbGameLevel.Controls.Add(this.pbEasy);
+            this.gbGameLevel.Controls.Add(this.pbMedium);
+            this.gbGameLevel.Controls.Add(this.label3);
+            this.gbGameLevel.Font = new System.Drawing.Font("Papyrus", 9.8F, System.Drawing.FontStyle.Bold);
+            this.gbGameLevel.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.gbGameLevel.Location = new System.Drawing.Point(58, 399);
+            this.gbGameLevel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gbGameLevel.Name = "gbGameLevel";
+            this.gbGameLevel.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gbGameLevel.Size = new System.Drawing.Size(714, 81);
+            this.gbGameLevel.TabIndex = 53;
+            this.gbGameLevel.TabStop = false;
+            this.gbGameLevel.Text = "Difficulty";
+            this.gbGameLevel.Visible = false;
             // 
             // frmMain
             // 
@@ -379,7 +386,7 @@
             this.Controls.Add(this.rbFriend);
             this.Controls.Add(this.btnStartGame);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gbGameLevel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.8F, System.Drawing.FontStyle.Underline);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -395,8 +402,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMedium)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbHard)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbGameLevel.ResumeLayout(false);
+            this.gbGameLevel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -423,6 +430,6 @@
         private System.Windows.Forms.PictureBox pbEasy;
         private System.Windows.Forms.PictureBox pbMedium;
         private System.Windows.Forms.PictureBox pbHard;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbGameLevel;
     }
 }

@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 using _3.Tic_Tac_Toe_Game.Properties;
 
@@ -22,6 +24,8 @@ namespace _3.Tic_Tac_Toe_Game
         //pbHard.Tag   = Hard = 2
 
         private Size _GameLevelPictureOriginalSize;
+        private Point _GameLevelPictureLocation;
+        private Dictionary<PictureBox, Point> _OriginalLocations;
 
         public frmMain()
         {
@@ -29,10 +33,17 @@ namespace _3.Tic_Tac_Toe_Game
             _player2PrevName = txtPlayer2Name.Text;
 
             _GameLevelPictureOriginalSize = pbEasy.Size; // all size is the same
-           // _GameLevelPictureOriginalSize = pbMedium.Size;
-           // _GameLevelPictureOriginalSize = pbHard.Size;
+                                                         // _GameLevelPictureOriginalSize = pbMedium.Size;
+                                                         // _GameLevelPictureOriginalSize = pbHard.Size;
+
+            _OriginalLocations = new Dictionary<PictureBox, Point>
+            {
+                { pbEasy, pbEasy.Location },
+                { pbMedium, pbMedium.Location },
+                { pbHard, pbHard.Location }
+            };
         }
-       
+
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox1.Checked)
@@ -69,7 +80,7 @@ namespace _3.Tic_Tac_Toe_Game
                 txtPlayer2Name.Visible = false;
                 txtPlayer2Name.Text = "Computer";
                 _isComputerPlayer = true;
-                groupBox1.Visible = true;
+                gbGameLevel.Visible = true;
             }
             else
             {
@@ -77,7 +88,7 @@ namespace _3.Tic_Tac_Toe_Game
                 txtPlayer2Name.Visible = true;
                 _isComputerPlayer = false;
                 txtPlayer2Name.Text = _player2PrevName;
-                groupBox1.Visible = false;
+                gbGameLevel.Visible = false;
 
             }
         }
@@ -101,11 +112,18 @@ namespace _3.Tic_Tac_Toe_Game
             _textCursor = new Cursor(Path.Combine(cursorFolder, "Text-Cursor.cur"));
 
             this.Cursor = _pointerCursor;
+
+
         }
 
-        private void btnStartGame_MouseEnter(object sender, EventArgs e)
+        private void ctrl_MouseEnter(object sender, EventArgs e)
         {
             ((Control)sender).Cursor = _handCursor;
+        }
+
+        private void ctrl_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = _pointerCursor;
         }
 
         private void pictureBox1_MouseHover(object sender, EventArgs e)
@@ -125,12 +143,20 @@ namespace _3.Tic_Tac_Toe_Game
 
         private void ChangeSelectedLevelSize(PictureBox selectedPicture)
         {
-            /*     foreach (PictureBox pic in this.Controls.OfType<PictureBox>())
-                 {
-                     pic.Size = new Size(pic.Width, pic.Height);
-                     pic.BackColor = Color.Transparent;
-                 }*/
+            
+
+            foreach (PictureBox pic in gbGameLevel.Controls.OfType<PictureBox>().Where(B => B.Tag != null))
+            {
+                pic.Size = _GameLevelPictureOriginalSize;
+                pic.Location = _OriginalLocations[pic];
+            }
             selectedPicture.Size = new Size((int)(selectedPicture.Width * 1.10), (int)(selectedPicture.Height * 1.25));
+
+            
+            selectedPicture.Location = new Point(selectedPicture.Location.X, selectedPicture.Location.Y - 10);
+            _GameLevel = (enGameLevel)Convert.ToInt32(selectedPicture.Tag);
+
+            MessageBox.Show(_GameLevel.ToString());
         }
         private void GameLevel_ClickEvent(object sender, EventArgs e)
         {

@@ -240,8 +240,8 @@
             this.btn9.Text = "?";
             this.btn9.UseVisualStyleBackColor = false;
             this.btn9.Click += new System.EventHandler(this.btn_Click);
-            this.btn9.MouseEnter += new System.EventHandler(this.btn9_MouseEnter);
-            this.btn9.MouseLeave += new System.EventHandler(this.btn9_MouseLeave);
+            this.btn9.MouseEnter += new System.EventHandler(this.ctrl_MouseEnter);
+            this.btn9.MouseLeave += new System.EventHandler(this.ctrl_MouseLeave);
             // 
             // btn8
             // 
@@ -258,8 +258,8 @@
             this.btn8.Text = "?";
             this.btn8.UseVisualStyleBackColor = false;
             this.btn8.Click += new System.EventHandler(this.btn_Click);
-            this.btn8.MouseEnter += new System.EventHandler(this.btn9_MouseEnter);
-            this.btn8.MouseLeave += new System.EventHandler(this.btn9_MouseLeave);
+            this.btn8.MouseEnter += new System.EventHandler(this.ctrl_MouseEnter);
+            this.btn8.MouseLeave += new System.EventHandler(this.ctrl_MouseLeave);
             // 
             // btn4
             // 
@@ -276,8 +276,8 @@
             this.btn4.Text = "?";
             this.btn4.UseVisualStyleBackColor = false;
             this.btn4.Click += new System.EventHandler(this.btn_Click);
-            this.btn4.MouseEnter += new System.EventHandler(this.btn9_MouseEnter);
-            this.btn4.MouseLeave += new System.EventHandler(this.btn9_MouseLeave);
+            this.btn4.MouseEnter += new System.EventHandler(this.ctrl_MouseEnter);
+            this.btn4.MouseLeave += new System.EventHandler(this.ctrl_MouseLeave);
             // 
             // btn7
             // 
@@ -294,8 +294,8 @@
             this.btn7.Text = "?";
             this.btn7.UseVisualStyleBackColor = false;
             this.btn7.Click += new System.EventHandler(this.btn_Click);
-            this.btn7.MouseEnter += new System.EventHandler(this.btn9_MouseEnter);
-            this.btn7.MouseLeave += new System.EventHandler(this.btn9_MouseLeave);
+            this.btn7.MouseEnter += new System.EventHandler(this.ctrl_MouseEnter);
+            this.btn7.MouseLeave += new System.EventHandler(this.ctrl_MouseLeave);
             // 
             // btn6
             // 
@@ -312,8 +312,8 @@
             this.btn6.Text = "?";
             this.btn6.UseVisualStyleBackColor = false;
             this.btn6.Click += new System.EventHandler(this.btn_Click);
-            this.btn6.MouseEnter += new System.EventHandler(this.btn9_MouseEnter);
-            this.btn6.MouseLeave += new System.EventHandler(this.btn9_MouseLeave);
+            this.btn6.MouseEnter += new System.EventHandler(this.ctrl_MouseEnter);
+            this.btn6.MouseLeave += new System.EventHandler(this.ctrl_MouseLeave);
             // 
             // btn1
             // 
@@ -330,8 +330,8 @@
             this.btn1.Text = "?";
             this.btn1.UseVisualStyleBackColor = false;
             this.btn1.Click += new System.EventHandler(this.btn_Click);
-            this.btn1.MouseEnter += new System.EventHandler(this.btn9_MouseEnter);
-            this.btn1.MouseLeave += new System.EventHandler(this.btn9_MouseLeave);
+            this.btn1.MouseEnter += new System.EventHandler(this.ctrl_MouseEnter);
+            this.btn1.MouseLeave += new System.EventHandler(this.ctrl_MouseLeave);
             // 
             // btn2
             // 
@@ -348,8 +348,8 @@
             this.btn2.Text = "?";
             this.btn2.UseVisualStyleBackColor = false;
             this.btn2.Click += new System.EventHandler(this.btn_Click);
-            this.btn2.MouseEnter += new System.EventHandler(this.btn9_MouseEnter);
-            this.btn2.MouseLeave += new System.EventHandler(this.btn9_MouseLeave);
+            this.btn2.MouseEnter += new System.EventHandler(this.ctrl_MouseEnter);
+            this.btn2.MouseLeave += new System.EventHandler(this.ctrl_MouseLeave);
             // 
             // btn3
             // 
@@ -366,8 +366,8 @@
             this.btn3.Text = "?";
             this.btn3.UseVisualStyleBackColor = false;
             this.btn3.Click += new System.EventHandler(this.btn_Click);
-            this.btn3.MouseEnter += new System.EventHandler(this.btn9_MouseEnter);
-            this.btn3.MouseLeave += new System.EventHandler(this.btn9_MouseLeave);
+            this.btn3.MouseEnter += new System.EventHandler(this.ctrl_MouseEnter);
+            this.btn3.MouseLeave += new System.EventHandler(this.ctrl_MouseLeave);
             // 
             // btn5
             // 
@@ -384,8 +384,8 @@
             this.btn5.Text = "?";
             this.btn5.UseVisualStyleBackColor = false;
             this.btn5.Click += new System.EventHandler(this.btn_Click);
-            this.btn5.MouseEnter += new System.EventHandler(this.btn9_MouseEnter);
-            this.btn5.MouseLeave += new System.EventHandler(this.btn9_MouseLeave);
+            this.btn5.MouseEnter += new System.EventHandler(this.ctrl_MouseEnter);
+            this.btn5.MouseLeave += new System.EventHandler(this.ctrl_MouseLeave);
             // 
             // gbCards
             // 

@@ -524,12 +524,12 @@ namespace _3.Tic_Tac_Toe_Game
             CenterObjOverObj(lblFinalRound, btnRestartRound);
         }
 
-        private void btn9_MouseEnter(object sender, EventArgs e)
+        private void ctrl_MouseEnter(object sender, EventArgs e)
         {
             ((Control)sender).Cursor = _handCursor;
         }
 
-        private void btn9_MouseLeave(object sender, EventArgs e)
+        private void ctrl_MouseLeave(object sender, EventArgs e)
         {
             this.Cursor = _pointerCursor;
         }
