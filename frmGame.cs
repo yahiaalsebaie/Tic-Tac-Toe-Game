@@ -4,6 +4,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using _3.Tic_Tac_Toe_Game.Properties;
 // جرب تخلي اللاعب يخار في الأول هل يلاعب حد معاه ولا الكومبيوتر 
@@ -115,7 +116,7 @@ namespace _3.Tic_Tac_Toe_Game
             if (CheckValues(btn1, btn5, btn9)) return;
             if (CheckValues(btn3, btn5, btn7)) return;
 
-            if (_isComputerPlayer) ComputerPlay(); //AI mode
+            if (_isComputerPlayer) ComputerPlayWithDelayAsync(); //AI mode
 
             // Draw
             if (GameStatus.PlayCount == 9)
@@ -532,6 +533,12 @@ namespace _3.Tic_Tac_Toe_Game
         private void ctrl_MouseLeave(object sender, EventArgs e)
         {
             this.Cursor = _pointerCursor;
+        }
+
+        private async Task ComputerPlayWithDelayAsync()
+        {
+            await Task.Delay(500);
+            ComputerPlay();
         }
     }
 }
