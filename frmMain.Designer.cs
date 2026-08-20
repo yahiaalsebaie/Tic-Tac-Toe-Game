@@ -41,8 +41,9 @@
             this.gbDetails = new System.Windows.Forms.GroupBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.lblLevel = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblDifficulty = new System.Windows.Forms.Label();
             this.pbEasy = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -50,6 +51,7 @@
             this.pbMedium = new System.Windows.Forms.PictureBox();
             this.pbHard = new System.Windows.Forms.PictureBox();
             this.gbGameLevel = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.gbDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEasy)).BeginInit();
@@ -77,7 +79,7 @@
             this.lblPlayer2Title.BackColor = System.Drawing.Color.Transparent;
             this.lblPlayer2Title.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlayer2Title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(202)))), ((int)(((byte)(228)))));
-            this.lblPlayer2Title.Location = new System.Drawing.Point(237, 24);
+            this.lblPlayer2Title.Location = new System.Drawing.Point(238, 24);
             this.lblPlayer2Title.Name = "lblPlayer2Title";
             this.lblPlayer2Title.Size = new System.Drawing.Size(164, 42);
             this.lblPlayer2Title.TabIndex = 46;
@@ -89,7 +91,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(228)))), ((int)(((byte)(46)))));
-            this.label2.Location = new System.Drawing.Point(471, 24);
+            this.label2.Location = new System.Drawing.Point(470, 24);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(211, 42);
             this.label2.TabIndex = 45;
@@ -180,6 +182,7 @@
             this.rbFriend.TabStop = true;
             this.rbFriend.Text = "Friend";
             this.rbFriend.UseVisualStyleBackColor = true;
+            this.rbFriend.CheckedChanged += new System.EventHandler(this.rbFriend_CheckedChanged);
             this.rbFriend.MouseEnter += new System.EventHandler(this.ctrl_MouseEnter);
             this.rbFriend.MouseLeave += new System.EventHandler(this.ctrl_MouseLeave);
             // 
@@ -190,8 +193,10 @@
             this.gbDetails.Controls.Add(this.lblTurnPlayer);
             this.gbDetails.Controls.Add(this.lblPlayer2Title);
             this.gbDetails.Controls.Add(this.txtPlayer1Name);
-            this.gbDetails.Controls.Add(this.txtPlayer2Name);
             this.gbDetails.Controls.Add(this.label2);
+            this.gbDetails.Controls.Add(this.lblDifficulty);
+            this.gbDetails.Controls.Add(this.txtPlayer2Name);
+            this.gbDetails.Controls.Add(this.lblLevel);
             this.gbDetails.Font = new System.Drawing.Font("Papyrus", 9.8F, System.Drawing.FontStyle.Bold);
             this.gbDetails.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.gbDetails.Location = new System.Drawing.Point(60, 240);
@@ -236,6 +241,21 @@
             0,
             0});
             // 
+            // lblLevel
+            // 
+            this.lblLevel.AutoSize = true;
+            this.lblLevel.BackColor = System.Drawing.Color.Transparent;
+            this.lblLevel.Font = new System.Drawing.Font("Showcard Gothic", 23F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLevel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(228)))), ((int)(((byte)(46)))));
+            this.lblLevel.Location = new System.Drawing.Point(254, 78);
+            this.lblLevel.Name = "lblLevel";
+            this.lblLevel.Size = new System.Drawing.Size(138, 49);
+            this.lblLevel.TabIndex = 47;
+            this.lblLevel.Text = "Level";
+            this.lblLevel.Visible = false;
+            this.lblLevel.SizeChanged += new System.EventHandler(this.lblLevel_SizeChanged);
+            this.lblLevel.Click += new System.EventHandler(this.lblLevel_Click);
+            // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
@@ -248,17 +268,18 @@
             this.lblTitle.TabIndex = 54;
             this.lblTitle.Text = "Tic-Tac-Toe Game";
             // 
-            // label3
+            // lblDifficulty
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(228)))), ((int)(((byte)(46)))));
-            this.label3.Location = new System.Drawing.Point(10, 28);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(216, 42);
-            this.label3.TabIndex = 43;
-            this.label3.Text = "Game Level";
+            this.lblDifficulty.AutoSize = true;
+            this.lblDifficulty.BackColor = System.Drawing.Color.Transparent;
+            this.lblDifficulty.Font = new System.Drawing.Font("Showcard Gothic", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDifficulty.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(228)))), ((int)(((byte)(46)))));
+            this.lblDifficulty.Location = new System.Drawing.Point(208, 24);
+            this.lblDifficulty.Name = "lblDifficulty";
+            this.lblDifficulty.Size = new System.Drawing.Size(230, 44);
+            this.lblDifficulty.TabIndex = 43;
+            this.lblDifficulty.Text = "Difficulty";
+            this.lblDifficulty.Visible = false;
             // 
             // pbEasy
             // 
@@ -355,10 +376,10 @@
             // 
             // gbGameLevel
             // 
+            this.gbGameLevel.Controls.Add(this.label3);
             this.gbGameLevel.Controls.Add(this.pbHard);
             this.gbGameLevel.Controls.Add(this.pbEasy);
             this.gbGameLevel.Controls.Add(this.pbMedium);
-            this.gbGameLevel.Controls.Add(this.label3);
             this.gbGameLevel.Font = new System.Drawing.Font("Papyrus", 9.8F, System.Drawing.FontStyle.Bold);
             this.gbGameLevel.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.gbGameLevel.Location = new System.Drawing.Point(58, 399);
@@ -370,6 +391,18 @@
             this.gbGameLevel.TabStop = false;
             this.gbGameLevel.Text = "Difficulty";
             this.gbGameLevel.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(228)))), ((int)(((byte)(46)))));
+            this.label3.Location = new System.Drawing.Point(6, 23);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(216, 42);
+            this.label3.TabIndex = 48;
+            this.label3.Text = "Game Level";
             // 
             // frmMain
             // 
@@ -426,10 +459,12 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblDifficulty;
         private System.Windows.Forms.PictureBox pbEasy;
         private System.Windows.Forms.PictureBox pbMedium;
         private System.Windows.Forms.PictureBox pbHard;
         private System.Windows.Forms.GroupBox gbGameLevel;
+        private System.Windows.Forms.Label lblLevel;
+        private System.Windows.Forms.Label label3;
     }
 }

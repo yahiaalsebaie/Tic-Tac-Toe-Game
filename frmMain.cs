@@ -81,6 +81,10 @@ namespace _3.Tic_Tac_Toe_Game
                 txtPlayer2Name.Text = "Computer";
                 _isComputerPlayer = true;
                 gbGameLevel.Visible = true;
+                lblLevel.Visible = true;
+                lblDifficulty.Visible = true;
+
+                
             }
             else
             {
@@ -143,7 +147,7 @@ namespace _3.Tic_Tac_Toe_Game
 
         private void ChangeSelectedLevelSize(PictureBox selectedPicture)
         {
-            
+
 
             foreach (PictureBox pic in gbGameLevel.Controls.OfType<PictureBox>().Where(B => B.Tag != null))
             {
@@ -152,11 +156,24 @@ namespace _3.Tic_Tac_Toe_Game
             }
             selectedPicture.Size = new Size((int)(selectedPicture.Width * 1.10), (int)(selectedPicture.Height * 1.25));
 
-            
+
             selectedPicture.Location = new Point(selectedPicture.Location.X, selectedPicture.Location.Y - 10);
             _GameLevel = (enGameLevel)Convert.ToInt32(selectedPicture.Tag);
 
-            MessageBox.Show(_GameLevel.ToString());
+            lblLevel.Text = _GameLevel.ToString();
+            switch (_GameLevel)
+            {
+                case enGameLevel.Easy:
+                    lblLevel.ForeColor = Color.FromArgb(210, 236, 211);
+                    break;
+                case enGameLevel.Medium:
+                    lblLevel.ForeColor = Color.FromArgb(255, 190, 47);
+                    break;
+                case enGameLevel.Hard:
+                    lblLevel.ForeColor = Color.FromArgb(254, 76, 130);
+                    break;
+            }
+
         }
         private void GameLevel_ClickEvent(object sender, EventArgs e)
         {
@@ -164,6 +181,32 @@ namespace _3.Tic_Tac_Toe_Game
             _GameLevel = (enGameLevel)Convert.ToInt32(selectedPicture.Tag);
 
             ChangeSelectedLevelSize(selectedPicture);
+        }
+
+        private void CenterObjOverObj(Control obj1change, Control obj2base)
+        {
+            obj1change.AutoSize = true;
+
+            obj1change.Left = obj2base.Left + (obj2base.Width - obj1change.Width) / 2;
+        }
+        private void rbFriend_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbFriend.Checked)
+            {
+                lblDifficulty.Visible = false;
+                lblLevel.Visible = false;
+            }
+        }
+
+        private void lblLevel_SizeChanged(object sender, EventArgs e)
+        {
+            CenterObjOverObj(lblLevel, lblPlayer2Title);
+
+        }
+
+        private void lblLevel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
