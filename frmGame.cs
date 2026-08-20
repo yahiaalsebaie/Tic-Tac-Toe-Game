@@ -153,6 +153,7 @@ namespace _3.Tic_Tac_Toe_Game
                 btn.Tag = "X";
                 btn.ForeColor = Color.DarkSalmon;
                 lblShadow.Text = "O";
+                lblShadow.ForeColor = Color.AntiqueWhite;
                 lblTurnPlayer.Text = _player2Name;
 
                 CurrentPlayer = enPlayer.Player2;
@@ -162,6 +163,7 @@ namespace _3.Tic_Tac_Toe_Game
                 btn.Text = "O";
                 btn.Tag = "O";
                 lblShadow.Text = "X";
+                lblShadow.ForeColor = Color.FromArgb(200, 50, 50);
                 btn.ForeColor = Color.White;
 
                 lblTurnPlayer.Text = _player1Name;
