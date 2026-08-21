@@ -520,6 +520,22 @@ namespace _3.Tic_Tac_Toe_Game
             }
             return null;
         }
+        private Button CanBlock()
+        {
+            foreach (List<Button> line in _winningLines)
+            {
+                int xCount = 0;
+                Button emptyButton = null;
+
+                foreach (Button button in line)
+                {
+                    if (button.Tag?.ToString() == "X") xCount++;
+                    else if (button.Tag?.ToString() == "?") emptyButton = button;
+                }
+                if (xCount == 2 && emptyButton != null) return emptyButton;
+            }
+            return null;
+        }
         private void MediumGame(List<Button> availableButtons)
         {
             Button winningButton = CanWin(); // start only if AI can win.
@@ -528,7 +544,14 @@ namespace _3.Tic_Tac_Toe_Game
                 ChangeXorO(winningButton);
                 return;
             }
-            //CanBlock(); //next move if there is no winning button.
+
+            Button blockingButton = CanBlock(); //next move if there is no winning button.
+            if (blockingButton != null)
+            {
+                ChangeXorO(blockingButton);
+                return;
+            }
+
             RandomMove(availableButtons);
         }
         private void HardGame(List<Button> availableButtons)
