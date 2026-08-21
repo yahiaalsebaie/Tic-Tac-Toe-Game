@@ -35,14 +35,13 @@ namespace _3.Tic_Tac_Toe_Game
 
         private bool _isComputerPlayer = false;
 
-        private enum enGameLevel { Easy = 0, Medium = 1, Hard = 2 };
         enGameLevel _gameLevel = enGameLevel.Medium;
         public frmTicTacToeGame()
         {
             InitializeComponent();
         }
 
-        public frmTicTacToeGame(string player1 = "Player1",string player2 = "Player2", sbyte howManyRounds = -1,bool isComputerPlayer = false, frmMain frmMain = null)
+        public frmTicTacToeGame(string player1 = "Player1", string player2 = "Player2", sbyte howManyRounds = -1, bool isComputerPlayer = false,enGameLevel gameLevel = enGameLevel.Medium, frmMain frmMain = null)
         {
             InitializeComponent();
 
@@ -51,7 +50,7 @@ namespace _3.Tic_Tac_Toe_Game
             _howManyRounds = howManyRounds;
             _frmMain = frmMain;
             _isComputerPlayer = isComputerPlayer;
-            //     CenterObjOverObj(lblTurnPlayer, btnRestartRound);
+            _gameLevel = gameLevel;
         }
 
         public enum enPlayer
@@ -283,7 +282,8 @@ namespace _3.Tic_Tac_Toe_Game
 
             lblTurnPlayer.Text = _player1Name.Trim();
             lblWinner.Text = "IN PROGRESS";
-            // CenterObjOverObj(lblWinner, btnRestartRound);
+            lblShadow.Text = "X";
+            lblShadow.ForeColor = Color.FromArgb(200, 50, 50);
             foreach (Button btn in gbCards.Controls.OfType<Button>().Where(B => B.Tag != null))
             {
                 btn.Text = "?";
@@ -539,7 +539,7 @@ namespace _3.Tic_Tac_Toe_Game
 
         private async Task ComputerPlayWithDelayAsync()
         {
-            await Task.Delay(500);
+            await Task.Delay(600);
             ComputerPlay();
         }
     }

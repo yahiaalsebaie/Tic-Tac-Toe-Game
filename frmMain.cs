@@ -17,14 +17,13 @@ namespace _3.Tic_Tac_Toe_Game
         private Cursor _textCursor;
         private bool _isComputerPlayer = false;
 
-        private enum enGameLevel { Easy = 0, Medium = 1, Hard = 2 };
-        private enGameLevel _GameLevel;
+        //private enum enGameLevel { Easy = 0, Medium = 1, Hard = 2 };
+        enGameLevel _GameLevel = enGameLevel.Medium;
         //picEasy.Tag   = Easy = 0
         //pbMedium.Tag = Medium = 1
         //pbHard.Tag   = Hard = 2
 
         private Size _GameLevelPictureOriginalSize;
-        private Point _GameLevelPictureLocation;
         private Dictionary<PictureBox, Point> _OriginalLocations;
 
         public frmMain()
@@ -66,7 +65,7 @@ namespace _3.Tic_Tac_Toe_Game
                 numericUpDown1.Value = 1;
                 return;
             }
-            frmTicTacToeGame frmTicTacToeGame = new frmTicTacToeGame(txtPlayer1Name.Text.Trim(), txtPlayer2Name.Text.Trim(), (sbyte)numericUpDown1.Value, _isComputerPlayer, this);
+            frmTicTacToeGame frmTicTacToeGame = new frmTicTacToeGame(txtPlayer1Name.Text.Trim(), txtPlayer2Name.Text.Trim(), (sbyte)numericUpDown1.Value, _isComputerPlayer, _GameLevel,this);
             this.Hide();
             frmTicTacToeGame.ShowDialog();
         }
