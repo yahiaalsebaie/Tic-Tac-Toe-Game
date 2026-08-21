@@ -84,7 +84,15 @@ namespace _3.Tic_Tac_Toe_Game
                 lblLevel.Visible = true;
                 lblDifficulty.Visible = true;
 
-                
+
+                pbEasy.TabIndex = 7;
+                pbMedium.TabIndex = 8;
+                pbHard.TabIndex = 9;
+
+                pbEasy.TabStop = true;
+                pbMedium.TabStop = true;
+                pbHard.TabStop = true;
+
             }
             else
             {
@@ -95,6 +103,8 @@ namespace _3.Tic_Tac_Toe_Game
                 gbGameLevel.Visible = false;
 
             }
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -117,6 +127,7 @@ namespace _3.Tic_Tac_Toe_Game
 
             this.Cursor = _pointerCursor;
 
+            _GameLevel = enGameLevel.Medium; //by default
 
         }
 
@@ -204,9 +215,5 @@ namespace _3.Tic_Tac_Toe_Game
 
         }
 
-        private void lblLevel_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

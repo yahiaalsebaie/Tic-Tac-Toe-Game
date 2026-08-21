@@ -35,6 +35,8 @@ namespace _3.Tic_Tac_Toe_Game
 
         private bool _isComputerPlayer = false;
 
+        private enum enGameLevel { Easy = 0, Medium = 1, Hard = 2 };
+        enGameLevel _gameLevel = enGameLevel.Medium;
         public frmTicTacToeGame()
         {
             InitializeComponent();
