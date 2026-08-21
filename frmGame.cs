@@ -35,7 +35,7 @@ namespace _3.Tic_Tac_Toe_Game
 
         private bool _isComputerPlayer = false;
 
-        enGameLevel _gameLevel = enGameLevel.Medium;
+        private enGameLevel _gameLevel = enGameLevel.Medium;
 
         private readonly List<List<Button>> _winningLines;
         public frmTicTacToeGame()
@@ -43,7 +43,7 @@ namespace _3.Tic_Tac_Toe_Game
             InitializeComponent();
         }
 
-        public frmTicTacToeGame(string player1 = "Player1", string player2 = "Player2", sbyte howManyRounds = -1, bool isComputerPlayer = false,enGameLevel gameLevel = enGameLevel.Medium, frmMain frmMain = null)
+        public frmTicTacToeGame(string player1 = "Player1", string player2 = "Player2", sbyte howManyRounds = -1, bool isComputerPlayer = false, enGameLevel gameLevel = enGameLevel.Medium, frmMain frmMain = null)
         {
             InitializeComponent();
 
@@ -88,11 +88,16 @@ namespace _3.Tic_Tac_Toe_Game
 
         private enPlayer CurrentPlayer = enPlayer.Player1;
 
-        private void WinningState()
+        private void WinningState(List<Button> winningLine)
         {
-            btn1.ForeColor = Color.Orchid;
+            /*btn1.ForeColor = Color.Orchid;
             btn2.ForeColor = Color.Orchid;
-            btn3.ForeColor = Color.Orchid;
+            btn3.ForeColor = Color.Orchid;*/
+
+            foreach (Button button in winningLine)
+            {
+                button.ForeColor = Color.Orchid;
+            }
 
             GameStatus.GameOver = true;
 
@@ -113,22 +118,22 @@ namespace _3.Tic_Tac_Toe_Game
                 btn1.Tag.ToString() == btn2.Tag.ToString() &&
                 btn2.Tag.ToString() == btn3.Tag.ToString())
             {
-               /* btn1.ForeColor = Color.Orchid;
-                btn2.ForeColor = Color.Orchid;
-                btn3.ForeColor = Color.Orchid;
+                /* btn1.ForeColor = Color.Orchid;
+                 btn2.ForeColor = Color.Orchid;
+                 btn3.ForeColor = Color.Orchid;
 
-                GameStatus.GameOver = true;
+                 GameStatus.GameOver = true;
 
-                GameStatus.Winner = btn1.Tag.ToString() == "X" ? enWinner.Player1 : enWinner.Player2;
+                 GameStatus.Winner = btn1.Tag.ToString() == "X" ? enWinner.Player1 : enWinner.Player2;
 
-                lblWinner.Text = GameStatus.Winner.ToString().ToUpper();
+                 lblWinner.Text = GameStatus.Winner.ToString().ToUpper();
 
-                MessageBox.Show(lblWinner.Text + " Wins", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                 MessageBox.Show(lblWinner.Text + " Wins", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
-                UpdateWinnerScore();
+                 UpdateWinnerScore();
 
-                EndRound();
-*/
+                 EndRound();
+ */
                 return true;
             }
 
@@ -138,16 +143,25 @@ namespace _3.Tic_Tac_Toe_Game
 
         public void CheckWinner()
         {
-            if (CheckValues(btn1, btn2, btn3)) {WinningState(); return; }
-            if (CheckValues(btn4, btn5, btn6)) {WinningState(); return;}
-            if (CheckValues(btn7, btn8, btn9)) { WinningState(); return; }
+            /* if (CheckValues(btn1, btn2, btn3)) {WinningState(); return; }
+             if (CheckValues(btn4, btn5, btn6)) {WinningState(); return;}
+             if (CheckValues(btn7, btn8, btn9)) { WinningState(); return; }
 
-            if (CheckValues(btn1, btn4, btn7)) {WinningState(); return;}
-            if (CheckValues(btn2, btn5, btn8)) {WinningState(); return;}
-            if (CheckValues(btn3, btn6, btn9)) { WinningState(); return; }
+             if (CheckValues(btn1, btn4, btn7)) {WinningState(); return;}
+             if (CheckValues(btn2, btn5, btn8)) {WinningState(); return;}
+             if (CheckValues(btn3, btn6, btn9)) { WinningState(); return; }
 
-            if (CheckValues(btn1, btn5, btn9)){WinningState();  return;}
-            if (CheckValues(btn3, btn5, btn7)) { WinningState(); return; }
+             if (CheckValues(btn1, btn5, btn9)){WinningState();  return;}
+             if (CheckValues(btn3, btn5, btn7)) { WinningState(); return; }*/
+            foreach (List<Button> line in _winningLines)
+            {
+                if (CheckValues(line[0], line[1], line[2]))
+                {
+                    WinningState(line);
+                    return;
+                }
+            }
+
 
             if (_isComputerPlayer) ComputerPlayWithDelayAsync(); //AI mode
 
@@ -383,7 +397,7 @@ namespace _3.Tic_Tac_Toe_Game
             _handCursor = new Cursor(Path.Combine(cursorFolder, "Hand-Cursor (32).cur"));
 
             this.Cursor = _pointerCursor;
-            
+
 
 
 
@@ -489,7 +503,7 @@ namespace _3.Tic_Tac_Toe_Game
             RandomMove(availableButtons);
         }
 
-        
+
         private Button CanWin()
         {
             foreach (List<Button> line in _winningLines)
@@ -499,8 +513,8 @@ namespace _3.Tic_Tac_Toe_Game
 
                 foreach (Button button in line)
                 {
-                    if(button.Tag?.ToString() == "O") oCount++;
-                    else if(button.Tag?.ToString() == "?") emptyButton = button;
+                    if (button.Tag?.ToString() == "O") oCount++;
+                    else if (button.Tag?.ToString() == "?") emptyButton = button;
                 }
                 if (oCount == 2 && emptyButton != null) return emptyButton;
             }
@@ -508,7 +522,7 @@ namespace _3.Tic_Tac_Toe_Game
         }
         private void MediumGame(List<Button> availableButtons)
         {
-          Button winningButton =  CanWin(); // start only if AI can win.
+            Button winningButton = CanWin(); // start only if AI can win.
             if (winningButton != null)
             {
                 ChangeXorO(winningButton);
@@ -532,17 +546,22 @@ namespace _3.Tic_Tac_Toe_Game
         private void ComputerPlay()
         {
             if (CurrentPlayer == enPlayer.Player1) return;
+           
             List<Button> availableButtons = gbCards.Controls.OfType<Button>().Where(B => B.Tag?.ToString() == "?").ToList();
             if (availableButtons.Count == 0) { return; }
             switch (_gameLevel)
             {
-                case enGameLevel.Easy: EasyGame(availableButtons);
+                case enGameLevel.Easy:
+                    EasyGame(availableButtons);
                     break;
-                case enGameLevel.Medium: MediumGame(availableButtons);
+                case enGameLevel.Medium:
+                    MediumGame(availableButtons);
                     break;
-                case enGameLevel.Hard: HardGame(availableButtons);
+                case enGameLevel.Hard:
+                    HardGame(availableButtons);
                     break;
-                default: MediumGame(availableButtons);
+                default:
+                    MediumGame(availableButtons);
                     break;
             }
 
